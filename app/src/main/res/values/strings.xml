@@ -1,0 +1,60 @@
+<resources>
+
+    <string name="app_name">I\'m Magic</string>
+
+    <!--Bottom navigation-->
+    <string name="home_nav">Home</string>
+    <string name="favourite">Favourite</string>
+    <string name="notification">Notifications</string>
+    <string name="cards">Cards</string>
+    <string name="my_profile">My profile</string>
+
+    <!--Buttons-->
+    <string name="explore_btn">Explore</string>
+    <string name="find_cards_btn">Find cards</string>
+    <string name="watch_add_btn">Watch add</string>
+    <string name="continuue_btn">Continue</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="find_more_in_shop_btn">Find more in shop</string>
+    <string name="buy_card_set">Buy card set</string>
+    <string name="read_cards">Read card set</string>
+    <string name="search_bar">Search…</string>
+    <string name="set_notification">Set notification</string>
+
+    <!--Settings-->
+    <string name="settings_about_app">About app</string>
+    <string name="settings_reset_progress">Reset progress</string>
+    <string name="settings_credits">Credits</string>
+    <string name="settings_rate_us">Rate us</string>
+    <string name="settings_privacy_policy">Privacy policy</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_edit_profile">Edit profile</string>
+    <string name="settings_follow_us">Follow us</string>
+
+
+    <!--Languages -->
+    <string name="polish">Polish</string>
+    <string name="english">English</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip_btn">Skip</string>
+    <string name="next_btn">Next</string>
+
+    <!--Onboarding -->
+    <string name="screen1_onboarding_headline">Welcome to I\'m magic !</string>
+    <string name="screen1_onboarding_description">Welcome to the app that will provide you with a daily dose of inspiring affirmations.Check what we prepare for you…</string>
+
+    <string name="screen2_onboarding_headline">Affirmation course</string>
+    <string name="screen2_onboarding_description">Here, you\'ll explore carefully selected affirmations designed to help you cultivate a positive mindset</string>
+
+    <string name="screen3_onboarding_headline1">Notifications</string>
+    <string name="screen3_onboarding_description1">Notifications ensure you never miss a moment of inspiration</string>
+    <string name="screen3_onboarding_headline2">Widgets</string>
+    <string name="screen3_onboarding_description2">Keep your favorite affirmations right on your phone screen and let them be your guiding light, inspiring you to embrace each day with positivity and confidence</string>
+
+    <string name="screen4_onboarding_headline">Create your own affirmations</string>
+    <string name="screen4_onboarding_description">Unleash your inner creativity by crafting custom affirmation cards that resonate with your soul\'s desires</string>
+    <string name="remind_me_latter">Remind me latter</string>
+
+</resources>
