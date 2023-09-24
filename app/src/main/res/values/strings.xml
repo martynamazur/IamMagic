@@ -2,6 +2,10 @@
 
     <string name="app_name">I\'m Magic</string>
 
+    <!--Type of languages-->
+    <string name="polish_language">Polish</string>
+    <string name="english_language">English</string>
+
     <!--Bottom navigation-->
     <string name="home_nav">Home</string>
     <string name="favourite">Favourite</string>
@@ -33,6 +37,7 @@
     <string name="settings_follow_us">Follow us</string>
 
 
+
     <!--Languages -->
     <string name="polish">Polish</string>
     <string name="english">English</string>
@@ -56,5 +61,20 @@
     <string name="screen4_onboarding_headline">Create your own affirmations</string>
     <string name="screen4_onboarding_description">Unleash your inner creativity by crafting custom affirmation cards that resonate with your soul\'s desires</string>
     <string name="remind_me_latter">Remind me latter</string>
+    <string name="settings">Settings</string>
+
+    <!-- Summary -->
+    <string name="summary_first_headline">Completed!</string>
+    <string name="summary_second_headline_default">You’ve read 0 cards</string>
+
+    <string name="summary_time_default">00:00</string>
+    <string name="summary_amount_of_alchemy_point_default">0</string>
+    <string name="summary_amount_of_experience_points_default">0</string>
+
+    <string name="summary_headline_time">Time</string>
+    <string name="summary_headline_soul_points">Soul points</string>
+    <string name="summary_headline_experience_points">Experience</string>
+
+
 
 </resources>

@@ -7,8 +7,9 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.immagic.first_use.SetLanguage
+
 import com.example.immagic.nawigation.HomeFragment
+import com.example.immagic.settings.SetLanguage
 
 class Run : AppCompatActivity(){
 
