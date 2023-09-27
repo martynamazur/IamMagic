@@ -18,6 +18,7 @@
     <color name="corner_dark_violet">#3A1A53</color>
     <color name="progress_bar_grey">#DBDBF6</color>
     <color name="locked_course_grey">#EBEBEB</color>
-
+    <color name="action_play_btn">#CDCDE7</color>
+    <color name="summary_line">#E8E8E8</color>
 
 </resources>

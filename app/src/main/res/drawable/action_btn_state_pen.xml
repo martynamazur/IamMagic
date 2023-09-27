@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/empty_icon_pen">
+        <bitmap android:src="@drawable/pen_icon" />
+    </item>
+
+    <item android:id="@+id/filled_icon_pen" android:drawable="@drawable/filled_icon_pen" />
+</layer-list>
+

@@ -74,7 +74,7 @@
     <string name="summary_headline_time">Time</string>
     <string name="summary_headline_soul_points">Soul points</string>
     <string name="summary_headline_experience_points">Experience</string>
-
+    <string name="categories_headline">CATEGORIES</string>
 
 
 </resources>
