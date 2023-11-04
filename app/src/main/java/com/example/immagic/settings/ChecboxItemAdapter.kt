@@ -8,6 +8,7 @@ import android.widget.CheckBox
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.immagic.R
+import com.example.immagic.nawigation.myprofile.settings.ItemModelCheckboxIcon
 
 class CheckboxListAdapter(
     private val context: Context,

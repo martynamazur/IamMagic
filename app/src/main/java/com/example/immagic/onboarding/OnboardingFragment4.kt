@@ -9,20 +9,22 @@ import android.view.ViewGroup
 import android.widget.Button
 import com.example.immagic.first_use.SetName
 import com.example.immagic.R
+import com.example.immagic.nawigation.ManageNawigation
 
 class OnboardingFragment4 : Fragment() {
 
-    private lateinit var continuueBtnOnboarding: Button
+    private lateinit var continuueBtnEndOnboarding: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.fragment_onboarding4, container, false)
-        continuueBtnOnboarding = view.findViewById(R.id.continuueBtnOnboarding)
-        continuueBtnOnboarding.setOnClickListener {
+        continuueBtnEndOnboarding = view.findViewById(R.id.continuueBtnOnboarding)
+        continuueBtnEndOnboarding.setOnClickListener {
             val intent = Intent(requireContext(), SetName::class.java)
             startActivity(intent)
+
         }
         return view
     }

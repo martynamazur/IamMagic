@@ -5,11 +5,9 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 
-import com.example.immagic.nawigation.HomeFragment
-import com.example.immagic.settings.SetLanguage
+import com.example.immagic.nawigation.myprofile.settings.SetLanguage
 
 class Run : AppCompatActivity(){
 

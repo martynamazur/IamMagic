@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:layout_marginTop="12dp"
     >
 
     <LinearLayout
@@ -15,23 +16,31 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/closeCourseBtn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:background="@android:color/transparent"
             app:srcCompat="@drawable/close_play_icon"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="8dp"/>
 
         <ProgressBar
             android:id="@+id/progressBarCards"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="240dp"
-            android:layout_height="20dp" />
+            style="@style/CustomProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_gravity="center"
+            android:layout_weight="18"
+
+            android:layout_marginEnd="16dp"/>
 
         <TextView
             android:id="@+id/amountOfReadCards"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="12dp"
             android:layout_weight="1"
             android:text="0/0" />
     </LinearLayout>

@@ -2,10 +2,44 @@
 <resources>
 
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Dostosuj kolory i inne atrybuty motywu tutaj -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
         <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
     </style>
+
+    <style name="MyAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@color/white</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowFullscreen">true</item>
+
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:popupAnimationStyle">@null</item>
+
+
+    </style>
+
+
+    <style name="AppTheme.PopupOverlay" parent="android:Widget.Holo.Light.PopupWindow">
+        <item name="android:popupBackground">@color/white</item>
+    </style>
+
+    <style name="BottomNavigationItem">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item> <!-- Opcjonalnie dostosuj rozmiar czcionki -->
+    </style>
+
+
 
     <style name="primary_text" >
         <item name="android:textSize">12sp</item>
@@ -13,6 +47,44 @@
         <item name="android:letterSpacing">0.05</item>
 
     </style>
+    <style name="CustomProgressBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:progressDrawable">@drawable/custom_progress_bar</item>
+        <item name="android:indeterminateOnly">false</item> <!-- Ustawienie na false, jeśli chcesz kontrolować postęp -->
+    </style>
+
+
+    <style name="HorizontalProgressBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminate">false</item>
+        <item name="android:max">100</item>
+        <item name="android:progressDrawable">@drawable/horizontal_progress_bar</item>
+    </style>
+
+    <style name="CircularProgressBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/circular_progress_drawable</item>
+    </style>
+
+
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slid_out_bottom</item>
+    </style>
+
+    <style name="MyBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/MYBottomSheetStyle</item>
+    </style>
+
+    <style name="MYBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+
 
 
 </resources>

@@ -15,8 +15,12 @@ class SetName: AppCompatActivity() {
         setContentView(R.layout.edit_name_layout)
         continuueBtnEditName = findViewById(R.id.continuueBtnEditName)
         continuueBtnEditName.setOnClickListener {
+
+            //update current user name before launching new activity
+
             val intent = Intent(this, SetFirstNotification::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

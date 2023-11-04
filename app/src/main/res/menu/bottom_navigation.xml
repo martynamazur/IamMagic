@@ -1,29 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/home"
         android:icon="@drawable/home_icon"
-        android:title="@string/home_nav" />
+        android:title="@string/home_nav"
+        app:labelVisibilityMode="labeled"
+
+        />
+
     <item
         android:id="@+id/favourite"
         android:icon="@drawable/heart_icon"
         android:title="@string/favourite"
+        app:showAsAction="never"
+        android:visible="true"
+
         />
 
     <item
         android:id="@+id/notifications"
         android:icon="@drawable/ring_iocn"
-        android:title="@string/notification"/>
+        android:title="@string/notification"
+        app:showAsAction="never"/>
 
     <item
         android:id="@+id/cards"
         android:icon="@drawable/card_icon"
-        android:title="@string/cards"/>
+        android:title="@string/cards"
+        app:showAsAction="never"/>
 
     <item
         android:id="@+id/myProfile"
         android:icon="@drawable/my_profile_icon"
-        android:title="@string/my_profile"/>
+        android:title="@string/my_profile"
+        app:showAsAction="never"/>
 
 </menu>

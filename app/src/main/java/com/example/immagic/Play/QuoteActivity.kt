@@ -4,22 +4,26 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.GestureDetector
 import android.view.MotionEvent
+import android.view.View
 import android.widget.ImageButton
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
 import com.example.immagic.R
+import com.example.immagic.nawigation.ManageNawigation
 import kotlin.properties.Delegates
 
 class QuoteActivity : AppCompatActivity() {
 
     private val quotes = arrayOf(
-        "Quote 1",
-        "Quote 2",
-        "Quote 3",
-        "Quote hue",
-        "Quote 4",
-        "Quote 6",
+        "com.example.immagic.database.Quote 1",
+        "com.example.immagic.database.Quote 2",
+        "com.example.immagic.database.Quote 3",
+        "com.example.immagic.database.Quote hue",
+        "com.example.immagic.database.Quote 4",
+        "com.example.immagic.database.Quote 6",
         "Life is a journey that must be traveled no matter how bad the roads and accommodations.",
         "The only way to do great work is to love what you do.",
         "The greatest glory in living lies not in never falling, but in rising every time we fall.",
@@ -50,11 +54,19 @@ class QuoteActivity : AppCompatActivity() {
     private lateinit var writedQuotesBtn: ImageButton
     private lateinit var addedToFavouritedBtn: ImageButton
 
+    //gora
+    private lateinit var closeCourseBtn: ImageButton
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quote)
+        //WindowCompat.setDecorFitsSystemWindows(window, false)
+
 
         System.out.println("jestem tutaj")
+
+        closeCourseBtn = findViewById(R.id.closeCourseBtn)
+
 
         playedSoundBtn = findViewById(R.id.playedSoundBtn)
         recorderSoundBtn = findViewById(R.id.recorderSoundBtn)
@@ -67,15 +79,22 @@ class QuoteActivity : AppCompatActivity() {
         quoteTextView = findViewById(R.id.quoteTextView)
         gestureDetector = GestureDetector(this, MyGestureListener())
 
+
+        //Cancel, exit
+        closeCourseBtn.setOnClickListener {
+            closeCourseBtn()
+        }
+
+
         // Initialize with the first quote
         amountOfCardInSet = 12 -1
-        progressBarReadCards.setProgress(amountOfCardInSet)// ustawic potem ze zmiennej po wyciagnieciu z bazy danych
-
+        progressBarReadCards.max = amountOfCardInSet
         updateQuoteText()
         updateTextAmount(0)
         // baza danych : id, zawartosc, soundAsistant, soundMine
 
         //Wyciagnac z bazy danych informacje o danym secie
+
 
 
         addedToFavouritedBtn.setOnClickListener {
@@ -113,9 +132,10 @@ class QuoteActivity : AppCompatActivity() {
                 // Swipe up (change direction)
                 if (deltaY < 0 && currentQuoteIndex < quotes.size - 1) {
                     currentQuoteIndex++
-                    progressBarReadCards.setProgress(currentQuoteIndex)
+                    progressBarReadCards.progress = currentQuoteIndex
                     updateQuoteText()
                     updateTextAmount(currentQuoteIndex)
+
                  } else if (currentQuoteIndex == quotes.size - 1) {
 
                 // Jesteś na końcu, przejdź do ekranu podsumowania
@@ -130,5 +150,23 @@ class QuoteActivity : AppCompatActivity() {
         amountOfReadCardsText.setText("$currentQuoteIndex/$amountOfCardInSet")
     }
 
+    fun closeCourseBtn(){
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        alertDialogBuilder.setTitle(R.string.dialog_title)
+        alertDialogBuilder.setMessage(R.string.dialog_message)
 
-}
+        alertDialogBuilder.setPositiveButton(R.string.dialog_quit_text){dialog, which ->
+            val intent = Intent(this,ManageNawigation::class.java )
+            startActivity(intent)
+            finish()
+
+    }
+        alertDialogBuilder.setNegativeButton(R.string.dialog_stay_text){dialog, which ->
+            dialog.dismiss()
+
+    }
+
+        val alertDialog = alertDialogBuilder.create()
+        alertDialog.show()
+
+}}

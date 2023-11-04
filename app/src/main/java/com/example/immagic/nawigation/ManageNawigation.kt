@@ -2,10 +2,12 @@ package com.example.immagic.nawigation
 
 
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.immagic.R
+import com.example.immagic.nawigation.categories.MyCardsFragment
+import com.example.immagic.nawigation.favourite.FavouriteFragment
+import com.example.immagic.nawigation.myprofile.MyProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -14,6 +16,8 @@ class ManageNawigation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.basic_nawigation)
+
+        //db test
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNavigationView.setOnItemSelectedListener { item ->

@@ -1,5 +1,6 @@
 package com.example.immagic.database
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 
@@ -20,6 +21,6 @@ import androidx.room.ForeignKey
     ]
 )
 data class UserCreatedNotificationsBridge(
-    val id_user: Int,
-    val id_notification: Int
+    @ColumnInfo(name="id_user") val idUser: Int,
+    @ColumnInfo(name="notification_id") val notificationId: Int
 )

@@ -37,5 +37,5 @@
         android:layout_height="wrap_content"
         android:text="@string/screen3_onboarding_description2" />
 
-    <include layout="@layout/onboarding_bottom_controls" />
+
 </LinearLayout>

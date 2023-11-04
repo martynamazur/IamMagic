@@ -1,11 +1,13 @@
+/*
 package com.example.immagic.settings
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.immagic.R
+import com.example.immagic.nawigation.myprofile.settings.SettingsAdapter
+import com.example.immagic.nawigation.myprofile.settings.SettingsModel
 
 class Settings : AppCompatActivity() {
 
@@ -19,11 +21,12 @@ class Settings : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings)
 
+
         settingsListRc = findViewById(R.id.settingsListRc)
 
-        /*
-        Settings List
-         */
+
+
+        settingsListObject = ArrayList()
         val editProfil = SettingsModel(resources.getString(R.string.settings_edit_profile),"sun")
         val theme = SettingsModel(resources.getString(R.string.settings_theme),"sun")
         val privacyPolicy = SettingsModel(resources.getString(R.string.settings_privacy_policy),"sun")
@@ -34,14 +37,21 @@ class Settings : AppCompatActivity() {
 
         settingsListObject.addAll(listOf(editProfil,theme,privacyPolicy,rateUs,credits,aboutUs,resetProgress))
 
+
         val layoutManager = LinearLayoutManager(this)
         settingsListRc.layoutManager = layoutManager
         settingsAdapter = SettingsAdapter(this, settingsListObject)
         settingsListRc.adapter = settingsAdapter
 
 
+
+
+
+
     }
 
 }
+
+ */
 
 

@@ -1,22 +1,14 @@
 package com.example.immagic.database
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
-@Entity(
-    tableName = "Level",
-    foreignKeys = [
-        ForeignKey(
-            entity = Category::class,
-            parentColumns = ["id_category"],
-            childColumns = ["unlocked_category_id"]
-        )
-    ]
-)
+@Entity(tableName = "Level")
 data class Level(
     @PrimaryKey(autoGenerate = true) val id_level: Int = 0,
-    val required_points: Int,
-    val alchemy_points: Int,
-    val unlocked_category_id: Int
+    @ColumnInfo(name = "required_points") val requiredPoints: Int,
+    @ColumnInfo(name = "alchemy_points") val alchemyPoints: Int,
+    @ColumnInfo(name = "unlocked_category_id")val unlockedCategoryId: Int
 )

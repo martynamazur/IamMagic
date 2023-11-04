@@ -1,0 +1,86 @@
+<resources>
+
+    <string name="app_name">Jestem Magiczny</string>
+
+    <!--Type of languages-->
+    <string name="polish_language">Polski</string>
+    <string name="english_language">Angielski</string>
+
+    <!--Bottom navigation-->
+    <string name="home_nav">Strona główna</string>
+    <string name="favourite">Ulubione</string>
+    <string name="notification">Powiadomienia</string>
+    <string name="cards">Karty</string>
+    <string name="my_profile">Mój profil</string>
+
+    <!--Buttons-->
+    <string name="explore_btn">Odkrywaj</string>
+    <string name="find_cards_btn">Znajdź karty</string>
+    <string name="watch_add_btn">Obejrzyj reklamę</string>
+    <string name="continuue_btn">Kontynuuj</string>
+    <string name="cancel_btn">Anuluj</string>
+    <string name="find_more_in_shop_btn">Znajdź więcej w sklepie</string>
+    <string name="buy_card_set">Kup zestaw kart</string>
+    <string name="read_cards">Czytaj zestaw kart</string>
+    <string name="search_bar">Szukaj…</string>
+    <string name="set_notification">Ustaw powiadomienie</string>
+
+    <!--Settings-->
+    <string name="settings_about_app">O aplikacji</string>
+    <string name="settings_reset_progress">Zresetuj postęp</string>
+    <string name="settings_credits">Autorzy</string>
+    <string name="settings_rate_us">Oceń nas</string>
+    <string name="settings_privacy_policy">Polityka prywatności</string>
+    <string name="settings_language">Język</string>
+    <string name="settings_theme">Motyw</string>
+    <string name="settings_edit_profile">Edytuj profil</string>
+    <string name="settings_follow_us">Śledź nas</string>
+
+    <!--Languages -->
+    <string name="polish">Polski</string>
+    <string name="english">Angielski</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Witaj pustym fragmencie</string>
+    <string name="skip_btn">Pomiń</string>
+    <string name="next_btn">Następny</string>
+
+    <!--Onboarding -->
+    <string name="screen1_onboarding_headline">Witaj w I\'m magic !</string>
+    <string name="screen1_onboarding_description">Witaj w aplikacji, która dostarczy ci codziennie inspirujących afirmacji. Sprawdź, co dla ciebie przygotowaliśmy...</string>
+
+    <string name="screen2_onboarding_headline">Kurs afirmacji</string>
+    <string name="screen2_onboarding_description">Tutaj będziesz odkrywać starannie wybrane afirmacje, które pomogą ci kształtować pozytywny umysł.</string>
+
+    <string name="screen3_onboarding_headline1">Powiadomienia</string>
+    <string name="screen3_onboarding_description1">Powiadomienia zapewniają, że nigdy nie przegapisz chwili inspiracji.</string>
+    <string name="screen3_onboarding_headline2">Widgety</string>
+    <string name="screen3_onboarding_description2">Trzymaj ulubione afirmacje na ekranie telefonu i niech staną się twoim przewodnikiem, inspirując cię do przyjęcia każdego dnia z pozytywnością i pewnością siebie.</string>
+
+    <string name="screen4_onboarding_headline">Stwórz własne afirmacje</string>
+    <string name="screen4_onboarding_description">Uwolnij swoją kreatywność, tworząc własne karty afirmacji, które rezonują z pragnieniami twojej duszy.</string>
+    <string name="remind_me_latter">Przypomnij mi później</string>
+    <string name="settings">Ustawienia</string>
+
+    <!-- Summary -->
+    <string name="summary_first_headline">Zakończone!</string>
+    <string name="summary_second_headline_default">Przeczytałeś 0 kart</string>
+
+    <string name="summary_time_default">00:00</string>
+    <string name="summary_amount_of_alchemy_point_default">0</string>
+    <string name="summary_amount_of_experience_points_default">0</string>
+
+    <string name="summary_headline_time">Czas</string>
+    <string name="summary_headline_soul_points">Punkty duszy</string>
+    <string name="summary_headline_experience_points">Doświadczenie</string>
+    <string name="categories_headline">KATEGORIE</string>
+    <string name="dialog_title">Jesteś pewny, że chcesz wyjść?</string>
+    <string name="dialog_message">Cały postęp zostanie utracony.</string>
+    <string name="dialog_quit_text">Wyjdź</string>
+    <string name="dialog_stay_text">Zostań</string>
+    <string name="level_default">0</string>
+    <string name="alchemy_points_default">0</string>
+    <string name="chapter_1">ROZDZIAŁ 1</string>
+    <string name="chapter_1_quote">Jestem gotowy na rozpoczęcie mojej podróży</string>
+    <string name="headlineChooseLanguage">Wybierz język</string>
+
+</resources>
