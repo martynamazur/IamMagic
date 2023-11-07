@@ -17,7 +17,7 @@ class FavCardSetFragment : Fragment() {
         val transaction = childFragmentManager.beginTransaction()
         val fragment = EmptyCardSetFragment()
         val fragment2 = ListFavCardSetFragment()
-        val testCzyPustaLista = false
+        val testCzyPustaLista = true
 
         if (testCzyPustaLista) {
             transaction.replace(R.id.fragmentContainerSet, fragment)

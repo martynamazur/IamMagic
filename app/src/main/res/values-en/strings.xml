@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <string name="app_name">I\'m Magic</string>
 
@@ -41,10 +41,12 @@
     <!--Languages -->
     <string name="polish">Polish</string>
     <string name="english">English</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="skip_btn">Skip</string>
     <string name="next_btn">Next</string>
+
+    <string name="headlineChooseLanguage">Select the language</string>
 
     <!--Onboarding -->
     <string name="screen1_onboarding_headline">Welcome to I\'m magic !</string>
@@ -71,26 +73,45 @@
     <string name="summary_amount_of_alchemy_point_default">0</string>
     <string name="summary_amount_of_experience_points_default">0</string>
 
+
     <string name="summary_headline_time">Time</string>
     <string name="summary_headline_soul_points">Soul points</string>
     <string name="summary_headline_experience_points">Experience</string>
-    <string name="categories_headline">CATEGORIES</string>
+
+    <!-- Leave activity dialog -->
     <string name="dialog_title">Are you sure you want to leave?</string>
     <string name="dialog_message">All progress will be lost</string>
     <string name="dialog_quit_text">Quit</string>
     <string name="dialog_stay_text">Stay</string>
+
+
+
     <string name="level_default">0</string>
     <string name="alchemy_points_default">0</string>
     <string name="chapter_1">CHAPTER 1</string>
     <string name="chapter_1_quote">i’m ready to start my journey</string>
-    <string name="headlineChooseLanguage">Select the language</string>
+
+
+
+    <!-- My profile -->
     <string name="HelloNameDefault">Hello X</string>
     <string name="RandomDefaultQuote">I’m the miracle for this world</string>
     <string name="statisticDefault">user statistic</string>
+
+
+    <!-- Headline, Subheadline for Favourite -->
     <string name="headlineFavEmptyCards">Nothing Added Yet</string>
     <string name="subhealdineFavEmptyCards">Your heartwarming collection of liked cards with affirmations awaits. Every click here brings a smile to your face and a sprinkle of positivity to your life.</string>
-    <string name="subheadlineCardSet" />
     <string name="headlineFavCardSet">This is where your favorite card sets come to life. It\'s like having a library of inspiration at your fingertips. Dive into the wisdom that\'s captured your heart.</string>
+
+    <!-- Search Category -->
+    <string name="categories_headline">Categories</string>
+    <string name="shop_headline" tools:ignore="ExtraTranslation">Shop</string>
+
+    <!--Notifications -->
+    <string name="screen_name_notifications" tools:ignore="ExtraTranslation">Notifications</string>
+    <string name="subheadline_notification" tools:ignore="ExtraTranslation">Your notifications are patiently waiting for their debut!  Remember, every notification is a step towards a brighter, happier you!</string>
+    <string name="my_created_cards">My added cards</string>
 
 
 </resources>

@@ -1,9 +1,12 @@
 package com.example.immagic.nawigation.myprofile
+
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -13,17 +16,22 @@ import com.example.immagic.database.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+
 class ProfileFragment : Fragment() {
 
     private lateinit var statisticRc: RecyclerView
     private lateinit var statisticAdapter: StatisticAdapter
     private lateinit var statisticModelList: ArrayList<ProfileStatisticModel>
 
+    private lateinit var myCards: Button
+
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
+
+        myCards = view.findViewById(R.id.myCards)
         statisticModelList = ArrayList()
         getUserStatisticInfo()
 
@@ -32,9 +40,16 @@ class ProfileFragment : Fragment() {
         statisticRc.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         statisticRc.adapter = statisticAdapter
 
+        myCards.setOnClickListener {
+            val intent = Intent(requireContext(), MyCards::class.java)
+            startActivity(intent)
+        }
+
 
         return view
     }
+
+
 
     private fun getUserStatisticInfo() {
         lifecycleScope.launch {

@@ -43,6 +43,7 @@
         <activity android:name=".nawigation.myprofile.settings.TermsOfService"/>
         <activity android:name=".nawigation.myprofile.settings.AboutUs"/>
         <activity android:name=".nawigation.myprofile.settings.SetLanguage"/>
+        <activity android:name=".nawigation.myprofile.MyCards"/>
 
 
 

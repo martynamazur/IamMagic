@@ -1,3 +1,5 @@
+package com.example.immagic.database
+
 import androidx.room.*
 import com.example.immagic.database.Subcategory
 

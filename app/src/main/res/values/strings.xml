@@ -90,6 +90,7 @@
     <string name="headlineFavEmptyCards">Nothing Added Yet</string>
     <string name="subhealdineFavEmptyCards">Your heartwarming collection of liked cards with affirmations awaits. Every click here brings a smile to your face and a sprinkle of positivity to your life.</string>
     <string name="headlineFavCardSet">This is where your favorite card sets come to life. It\'s like having a library of inspiration at your fingertips. Dive into the wisdom that\'s captured your heart.</string>
+    <string name="my_created_cards">My added cards</string>
 
 
 </resources>

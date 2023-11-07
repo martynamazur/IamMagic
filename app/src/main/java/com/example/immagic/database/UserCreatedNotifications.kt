@@ -1,13 +1,24 @@
 package com.example.immagic.database
 
+
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "UserCreatedNotifications")
+@Entity(tableName = "UserCreatedNotifications",
+    foreignKeys = [
+        ForeignKey(
+            entity = CategoryCardSet::class,
+            parentColumns = ["id_cardSet"],
+            childColumns = ["id_cardSet"],
+
+        )
+    ]
+)
 data class UserCreatedNotifications(
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id_notification") val id_notification: Int = 0,
-    @ColumnInfo(name = "id_cardSet") val idCardSet: Int, // Klucz obcy do tabeli CategoryCardSet
+    @ColumnInfo(name = "id_cardSet") val idCardSet: Int,
     @ColumnInfo(name = "status") val status: Int,
     @ColumnInfo(name = "time_start") val timeStart: String, // Godzina i minuta jako tekst (np. "10:30")
     @ColumnInfo(name = "time_end") val timeEnd: String, // Godzina i minuta jako tekst (np. "11:00")
