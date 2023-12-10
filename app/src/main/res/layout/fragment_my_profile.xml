@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".nawigation.myprofile.MyProfileFragment">
+    tools:context=".nawigation.myprofile.profile.MyProfileFragment">
 
 
     <com.google.android.material.tabs.TabLayout
@@ -16,6 +16,7 @@
         app:tabIndicator="@drawable/tab_indicator"
         app:tabTextColor="@color/black"
         android:elevation="6dp"
+        app:tabSelectedTextColor="@color/primary_violet"
         android:layout_marginBottom="16dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" >
 

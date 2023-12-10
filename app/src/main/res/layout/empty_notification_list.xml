@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/BottomLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView432"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12sp"
+        android:text="@string/empty_notification_headline"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView434"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32sp"
+        android:text="@string/empty_notification_description" />
+
+    <Button
+        android:id="@+id/addNewNotificationBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/primary_button_background"
+        android:text="Button"
+        android:textColor="@color/white" />
+
+</LinearLayout>

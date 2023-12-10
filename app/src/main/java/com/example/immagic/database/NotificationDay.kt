@@ -1,5 +1,6 @@
 package com.example.immagic.database
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.ForeignKey
@@ -16,12 +17,13 @@ import androidx.room.ForeignKey
         )]
 )
 data class NotificationDay(
-    @PrimaryKey val id_notification: Int, // Klucz główny
-    val Sunday: Boolean,
-    val Monday: Boolean,
-    val Tuesday: Boolean,
-    val Wednesday: Boolean,
-    val Thursday: Boolean,
-    val Friday: Boolean,
-    val Saturday: Boolean
+    @PrimaryKey @ColumnInfo("id_notification") val id_notification: Int, // Klucz główny
+    @ColumnInfo(name = "sunday") val Sunday: Int,
+    @ColumnInfo(name = "monday") val Monday: Int,
+    @ColumnInfo(name = "thuesday") val Tuesday: Int,
+    @ColumnInfo(name = "wednesday") val Wednesday: Int,
+    @ColumnInfo(name = "thursday") val Thursday: Int,
+    @ColumnInfo(name = "friday") val Friday: Int,
+    @ColumnInfo(name = "saturday") val Saturday: Int
+
 )

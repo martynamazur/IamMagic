@@ -1,0 +1,9 @@
+<!-- res/menu/menu_example.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_delete_all"
+        android:title="@string/delete_all"/>
+    <item
+        android:id="@+id/menu_delete_selected"
+        android:title="@string/delete"/>
+</menu>

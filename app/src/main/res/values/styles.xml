@@ -19,8 +19,8 @@
         <item name="android:windowTranslucentStatus">false</item>
         <item name="android:navigationBarColor">@android:color/white</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowFullscreen">false</item>
 
         <item name="android:windowLightNavigationBar">true</item>
         <item name="android:windowContentOverlay">@null</item>
@@ -81,6 +81,43 @@
 
     <style name="MYBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomLinearLayout">
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginBottom">32sp</item>
+    </style>
+
+    <style name="Margin">
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+
+    </style>
+
+    <style name="CommonTopMargin">
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">24dp</item>
+    </style>
+
+    <style name="paddingForShopItems">
+        <item name="android:paddingTop">18dp</item>
+        <item name="android:paddingBottom">18dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="headlineShopText">
+        <item name="android:letterSpacing">0.10</item>
+        <item name="android:textSize">16sp</item>
+
+    </style>
+    <style name="buyBtn">
+        <item name="backgroundColor">#DCDCDC</item>
+        <item name="borderRound">20dp</item>
     </style>
 
 

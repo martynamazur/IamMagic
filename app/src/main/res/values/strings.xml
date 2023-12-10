@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <string name="app_name">I\'m Magic</string>
 
@@ -37,13 +37,16 @@
     <string name="settings_follow_us">Follow us</string>
 
 
+
     <!--Languages -->
     <string name="polish">Polish</string>
     <string name="english">English</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="skip_btn">Skip</string>
     <string name="next_btn">Next</string>
+
+    <string name="headlineChooseLanguage">Select the language</string>
 
     <!--Onboarding -->
     <string name="screen1_onboarding_headline">Welcome to I\'m magic !</string>
@@ -70,27 +73,74 @@
     <string name="summary_amount_of_alchemy_point_default">0</string>
     <string name="summary_amount_of_experience_points_default">0</string>
 
+
     <string name="summary_headline_time">Time</string>
     <string name="summary_headline_soul_points">Soul points</string>
     <string name="summary_headline_experience_points">Experience</string>
-    <string name="categories_headline">CATEGORIES</string>
+
+    <!-- Leave activity dialog -->
     <string name="dialog_title">Are you sure you want to leave?</string>
     <string name="dialog_message">All progress will be lost</string>
     <string name="dialog_quit_text">Quit</string>
     <string name="dialog_stay_text">Stay</string>
+
+
+
     <string name="level_default">0</string>
     <string name="alchemy_points_default">0</string>
     <string name="chapter_1">CHAPTER 1</string>
     <string name="chapter_1_quote">i’m ready to start my journey</string>
-    <string name="headlineChooseLanguage">Select the language</string>
-    <string name="headlineName">What’s your name ?</string>
+
+
+
+    <!-- My profile -->
     <string name="HelloNameDefault">Hello X</string>
     <string name="RandomDefaultQuote">I’m the miracle for this world</string>
     <string name="statisticDefault">user statistic</string>
+
+
+    <!-- Headline, Subheadline for Favourite -->
     <string name="headlineFavEmptyCards">Nothing Added Yet</string>
     <string name="subhealdineFavEmptyCards">Your heartwarming collection of liked cards with affirmations awaits. Every click here brings a smile to your face and a sprinkle of positivity to your life.</string>
     <string name="headlineFavCardSet">This is where your favorite card sets come to life. It\'s like having a library of inspiration at your fingertips. Dive into the wisdom that\'s captured your heart.</string>
+
+    <!-- Search Category -->
+    <string name="categories_headline">Categories</string>
+    <string name="shop_headline" tools:ignore="ExtraTranslation">Shop</string>
+
+    <!--Notifications -->
+    <string name="screen_name_notifications" tools:ignore="ExtraTranslation">Notifications</string>
+    <string name="subheadline_notification" tools:ignore="ExtraTranslation">Your notifications are patiently waiting for their debut!  Remember, every notification is a step towards a brighter, happier you!</string>
     <string name="my_created_cards">My added cards</string>
+    <string name="empty_notification_description">Your notifications are patiently waiting for their debut!  Remember, every notification is a step towards a brighter, happier you!</string>
+    <string name="empty_notification_headline"> Nothing in here yet </string>
+    <string name="add_new_notification">Add new notification</string>
+    <string name="edit_menu">Edit menu</string>
+    <string name="headlineName">updateft</string>
+    <string name="defaultHour">00:00AM - 00:00PM</string>
+    <string name="user_icon">User icon</string>
+    <string name="my_recordings">My recordings</string>
+    <string name="goBackNawigationBtn">go Back Nawigation Btn</string>
+    <string name="menuBtn">menu Btn</string>
+    <string name="delete_all">Delete all</string>
+    <string name="delete">Delete</string>
+    <string name="my_added_cards">My added cards</string>
+    <string name="my_added_cards_headline">Nothing to see...</string>
+    <string name="my_added_cards_description">"Make it personal—share your affirmations "</string>
+    <string name="add_a_new_card">Add a new card</string>
+    <string name="edit_profile_text">Change name</string>
+    <string name="saveBtn">Save</string>
+    <string name="your_name">Your name</string>
+    <string name="iamamagic">I am a magic...</string>
+    <string name="gainAlchemyBoottlesBtn">Gain alchemy bottles</string>
+    <string name="removeAddsForeverBtn">Remove adds forever</string>
+    <string name="magicChestHeadline">Magic chest</string>
+    <string name="freezStreakHeadline">Freez streak</string>
+    <string name="boostersHeadline">Boosters</string>
+    <string name="backgroundsHeadline">Backgrounds</string>
+    <string name="RandomRewards">Rewards</string>
+    <string name="alchemybottless">Alchemy bottles:</string>
+    <string name="default_number">0</string>
 
 
 </resources>

@@ -1,7 +1,6 @@
 package com.example.immagic.database
 
 import androidx.room.Entity
-import androidx.room.PrimaryKey
 import androidx.room.ColumnInfo
 import androidx.room.ForeignKey
 

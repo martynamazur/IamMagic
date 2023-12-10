@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Margin"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/emptyMyAddedCardsHeadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_added_cards_headline"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_added_cards_description" />
+
+    <Button
+        android:id="@+id/addANewcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/secondary_button"
+        android:drawableStart="@drawable/plus"
+        android:drawablePadding="12dp"
+        android:gravity="start|center_vertical"
+        android:text="@string/add_a_new_card" />
+
+</LinearLayout>

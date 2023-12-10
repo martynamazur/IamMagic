@@ -34,4 +34,12 @@ object PreferenceHelper {
     fun getCurrentUserId(): Int {
         return sharedPreferences.getInt("currentUserId",1) ?: 1
     }
+
+    fun getDayTimeThemeStatus(): Boolean {
+        return sharedPreferences.getBoolean("dayTimeisChecked", false)
+    }
+
+    fun getNightTimeThemeStatus(): Boolean {
+        return sharedPreferences.getBoolean("nightTimeisChecked", false)
+    }
 }

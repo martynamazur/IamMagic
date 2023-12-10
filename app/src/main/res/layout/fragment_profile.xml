@@ -1,57 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    tools:context=".nawigation.myprofile.ProfileFragment">
+
+    tools:context=".nawigation.myprofile.profile.ProfileFragment">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        style="@style/Margin"
         android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/HelloNameDefault"
-            android:textSize="20sp" />
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
 
-            android:src="@drawable/logo_icon" />
+            android:src="@drawable/logo_icon"
+            android:contentDescription="@string/user_icon" />
+
+        <TextView
+            android:id="@+id/helloName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/HelloNameDefault"
+            android:textAlignment="center"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/RandomDefaultQuote"
-            android:textSize="20sp" />
+            android:textSize="12sp"
+            android:textAlignment="center"
+             />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/statisticRc"
-
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24sp"
+            android:layout_marginBottom="40sp"
+            android:layout_gravity="center_horizontal"
+            >
 
         </androidx.recyclerview.widget.RecyclerView>
 
         <Button
-            android:id="@+id/myCards"
+            android:id="@+id/myCardsProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/arrow_right_icon"
+            android:drawableStart="@drawable/play_icon"
+
+            android:background="@drawable/profile_btn_background"
+            android:layout_marginBottom="16sp"
+            android:paddingTop="24sp"
+            android:paddingBottom="24sp"
+            android:paddingStart="24sp"
+            android:paddingEnd="24sp"
+            android:textAllCaps="false"
+            android:gravity="left"
+            android:drawablePadding="8dp"
             android:text="@string/my_created_cards" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/myRecordings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:drawableStart="@drawable/play_icon"
+            android:drawableEnd="@drawable/arrow_right_icon"
+
+
+            android:background="@drawable/profile_btn_background"
+            android:layout_marginBottom="16sp"
+            android:paddingTop="24sp"
+            android:paddingBottom="24sp"
+            android:paddingStart="24sp"
+            android:paddingEnd="24sp"
+            android:textAllCaps="false"
+            android:gravity="left"
+            android:drawablePadding="8dp"
+            android:text="@string/my_recordings" />
+
+        <Button
+            android:id="@+id/shopBtnProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/play_icon"
+            android:drawableEnd="@drawable/arrow_right_icon"
+            android:background="@drawable/profile_btn_background"
+            android:layout_marginBottom="16sp"
+            android:paddingTop="24sp"
+            android:paddingBottom="24sp"
+            android:paddingStart="24sp"
+            android:paddingEnd="24sp"
+            android:gravity="left"
+            android:drawablePadding="8dp"
+            android:textAllCaps="false"
+            android:text="@string/shop_headline" />
 
     </LinearLayout>
 

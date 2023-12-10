@@ -8,9 +8,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.immagic.R
-import com.example.immagic.nawigation.categories.CategoryAdapter
-import com.example.immagic.nawigation.categories.CategoryModel
-import com.example.immagic.nawigation.myprofile.MyProfilePagerAdapter
+import com.example.immagic.nawigation.categories.category.CategoryAdapter
+import com.example.immagic.nawigation.categories.category.CategoryModel
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 

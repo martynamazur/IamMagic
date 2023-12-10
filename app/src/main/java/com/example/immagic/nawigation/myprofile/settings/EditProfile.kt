@@ -21,9 +21,9 @@ class EditProfile: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.edit_profile_layout)
 
-        goBackBtn = findViewById(R.id.goBackBtn)
-        inputNewName = findViewById(R.id.inputNewName)
-        saveBtn = findViewById(R.id.saveBtn)
+        goBackBtn = findViewById(R.id.goBackBtnEditProfile)
+        inputNewName = findViewById(R.id.editTextTextPersonName)
+        saveBtn = findViewById(R.id.saveBtnEditProfile)
 
         newName = inputNewName.text.toString()
 

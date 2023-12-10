@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         app:tabIndicator="@drawable/tab_indicator"
+        app:tabSelectedTextColor="@color/primary_violet"
         app:tabTextColor="@color/black"
         android:elevation="6dp"
         android:layout_marginBottom="16dp"
@@ -31,6 +32,8 @@
             android:text="Shop" />
 
     </com.google.android.material.tabs.TabLayout>
+
+
 
 
     <androidx.viewpager2.widget.ViewPager2

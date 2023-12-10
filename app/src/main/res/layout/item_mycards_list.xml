@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    style="@style/Margin"
+    android:background="@drawable/quote_list_background"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginTop="16dp"
+    >
+
+    <TextView
+
+        android:background="@drawable/quote_list_background"
+        android:id="@+id/quoteContentMyCards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+</LinearLayout>

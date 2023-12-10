@@ -8,14 +8,16 @@ import com.example.immagic.database.Subcategory
     foreignKeys = [
         ForeignKey(
             entity = Subcategory::class,
-            parentColumns = ["id_subcategory"], // Kolumny klucza głównego w tabeli nadrzędnej
-            childColumns = ["idSubcategory"],  // Kolumny klucza obcego w tej tabeli
-            onDelete = ForeignKey.CASCADE,      // Zachowanie przy usuwaniu w tabeli nadrzędnej
-            onUpdate = ForeignKey.CASCADE      // Zachowanie przy aktualizacji w tabeli nadrzędnej
-        )
+            parentColumns = ["id_subcategory"],
+            childColumns = ["idSubcategory"],
+            onDelete = ForeignKey.CASCADE,
+            onUpdate = ForeignKey.CASCADE
+        ),
+      //pomyslec
     ]
 )
 data class CategoryCardSet(
+
     @PrimaryKey @ColumnInfo(name = "id_cardSet") val idCardSet: Int,
     @ColumnInfo(name = "idSubcategory") val idSubcategory: Int,
     @ColumnInfo(name = "locked_status") val lockedStatus: Boolean,

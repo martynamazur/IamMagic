@@ -112,6 +112,34 @@
     <string name="screen_name_notifications" tools:ignore="ExtraTranslation">Notifications</string>
     <string name="subheadline_notification" tools:ignore="ExtraTranslation">Your notifications are patiently waiting for their debut!  Remember, every notification is a step towards a brighter, happier you!</string>
     <string name="my_created_cards">My added cards</string>
+    <string name="empty_notification_description">Your notifications are patiently waiting for their debut!  Remember, every notification is a step towards a brighter, happier you!</string>
+    <string name="empty_notification_headline"> Nothing in here yet </string>
+    <string name="add_new_notification">Add new notification</string>
+    <string name="edit_menu">Edit menu</string>
+    <string name="headlineName">updateft</string>
+    <string name="defaultHour">00:00AM - 00:00PM</string>
+    <string name="user_icon">User icon</string>
+    <string name="my_recordings">My recordings</string>
+    <string name="goBackNawigationBtn">go Back Nawigation Btn</string>
+    <string name="menuBtn">menu Btn</string>
+    <string name="delete_all">Delete all</string>
+    <string name="delete">Delete</string>
+    <string name="my_added_cards">My added cards</string>
+    <string name="my_added_cards_headline">Nothing to see...</string>
+    <string name="my_added_cards_description">"Make it personal—share your affirmations "</string>
+    <string name="add_a_new_card">Add a new card</string>
+    <string name="edit_profile_text">Change name</string>
+    <string name="saveBtn">Save</string>
+    <string name="your_name">Your name</string>
+    <string name="iamamagic">I am a magic...</string>
+    <string name="gainAlchemyBoottlesBtn">Gain alchemy bottles</string>
+    <string name="removeAddsForeverBtn">Remove adds forever</string>
+    <string name="freezStreakHeadline">Freez streak</string>
+    <string name="boostersHeadline">Boosters</string>
+    <string name="backgroundsHeadline">Backgrounds</string>
+    <string name="RandomRewards">Rewards</string>
+    <string name="alchemybottless">Alchemy bottles:</string>
+    <string name="default_number">0</string>
 
 
 </resources>

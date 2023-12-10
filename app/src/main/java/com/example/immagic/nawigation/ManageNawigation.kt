@@ -7,7 +7,8 @@ import androidx.fragment.app.Fragment
 import com.example.immagic.R
 import com.example.immagic.nawigation.categories.MyCardsFragment
 import com.example.immagic.nawigation.favourite.FavouriteFragment
-import com.example.immagic.nawigation.myprofile.MyProfileFragment
+import com.example.immagic.nawigation.myprofile.profile.MyProfileFragment
+import com.example.immagic.nawigation.notifications.NotificationsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 

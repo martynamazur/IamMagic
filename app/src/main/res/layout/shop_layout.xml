@@ -1,25 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView27"
+    <!-- AppBarLayout dla górnego paska -->
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Zawartosc layoutu sklepu" />
+        >
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+        <LinearLayout
 
-    <Button
-        android:id="@+id/button2"
+            android:id="@+id/walletInfoBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@color/white"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <!-- Zawartość paska informacyjnego -->
+
+
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/alchemybottless"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text= "@string/alchemy_points_default" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_weight="0"
+                android:layout_marginRight="32dp"
+                app:srcCompat="@drawable/alchemy_bottle" />
+
+            <TextView
+                android:id="@+id/textView49"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Puzzel:" />
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/default_number" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                app:srcCompat="@drawable/puzzletest" />
+
+
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- ScrollView z zawartością sklepu -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="Button" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            style="@style/Margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/watchAddBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zdobyć butelki alchemiczne"
+                android:background="@drawable/watch_add_background"
+                android:textAllCaps="false"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"/>
+
+            <Button
+                android:id="@+id/removeAddsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/removeAddsForeverBtn"
+                android:textAllCaps="false"
+                android:elevation="28.6dp"
+                android:background="@drawable/remove_adds_background"/>
+
+            <!-- Magic Chest -->
+            <TextView
+                style="@style/headlineShopText"
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/magicChestHeadline"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="16dp"
+
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/magicChestRc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+               />
+
+            <!-- Freez Streak -->
+            <TextView
+                style="@style/headlineShopText"
+                android:id="@+id/textView48"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Freez Streak" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/freezStreakRc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <!-- Boosters -->
+            <TextView
+                style="@style/headlineShopText"
+                android:id="@+id/textView50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Boosters" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/boostersRc"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <!-- Backgrounds -->
+            <TextView
+                style="@style/headlineShopText"
+                android:id="@+id/textView54"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tła" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/backgroundsRc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

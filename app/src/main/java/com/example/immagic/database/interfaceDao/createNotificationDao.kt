@@ -1,6 +1,8 @@
 package com.example.immagic.database.interfaceDao
+import androidx.room.Dao
 import androidx.room.Query
 
+@Dao
 interface createNotificationDao {
 
     @Query("INSERT INTO UserCreatedNotificationsBridge (id_user, id_notification) VALUES (:userId, (INSERT INTO UserCreatedNotifications (id_cardSet, status, time_start, time_start_indicator, time_end, time_end_indicator) VALUES (:id_cardSet, :status, :time_start, :time_start_indicator, :time_end, :time_end_indicator))")

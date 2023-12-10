@@ -13,7 +13,7 @@ class SetName: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.edit_name_layout)
-        continuueBtnEditName = findViewById(R.id.continuueBtnEditName)
+        continuueBtnEditName = findViewById(R.id.continueBtnSetName)
         continuueBtnEditName.setOnClickListener {
 
             //update current user name before launching new activity
