@@ -9,6 +9,8 @@
         <item name="android:statusBarColor">@android:color/white</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowLightNavigationBar">true</item>
+        <item name="bottomNavigationStyle">@style/Widget.BottomNavigationView</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="MyAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -25,10 +27,21 @@
         <item name="android:windowLightNavigationBar">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:popupAnimationStyle">@null</item>
+        <item name="bottomNavigationStyle">@style/Widget.BottomNavigationView</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
 
 
     </style>
 
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <!-- Ustawienie koloru tła na przezroczysty -->
+        <item name="itemBackground">@android:color/transparent</item>
+        <!-- Inne dostosowania stylu BottomNavigationView, jeśli są potrzebne -->
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
 
     <style name="AppTheme.PopupOverlay" parent="android:Widget.Holo.Light.PopupWindow">
         <item name="android:popupBackground">@color/white</item>
@@ -70,18 +83,7 @@
 
 
 
-    <style name="DialogAnimation">
-        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
-        <item name="android:windowExitAnimation">@anim/slid_out_bottom</item>
-    </style>
 
-    <style name="MyBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
-        <item name="bottomSheetStyle">@style/MYBottomSheetStyle</item>
-    </style>
-
-    <style name="MYBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@android:color/transparent</item>
-    </style>
 
     <style name="BottomLinearLayout">
         <item name="android:layout_gravity">bottom</item>
@@ -119,7 +121,6 @@
         <item name="backgroundColor">#DCDCDC</item>
         <item name="borderRound">20dp</item>
     </style>
-
 
 
 

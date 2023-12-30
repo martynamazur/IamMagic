@@ -2,11 +2,9 @@ package com.example.immagic.first_use
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.immagic.R
-import com.example.immagic.nawigation.HomeFragment
 import com.example.immagic.nawigation.ManageNawigation
 
 class SetFirstNotification : AppCompatActivity() {

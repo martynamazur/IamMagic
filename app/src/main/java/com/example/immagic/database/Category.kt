@@ -4,10 +4,11 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "Categories")
+@Entity(tableName = "Category")
 data class Category(
-    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id_category") val id_category: Int,
-    @ColumnInfo(name = "category_name") val categoryName: String?,
-    @ColumnInfo(name = "unlocked_status") val unlockedStatus: Int
+    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "categoryId") val categoryId: Int,
+    @ColumnInfo(name = "categoryName") val categoryName: String,
+    @ColumnInfo(name = "availability") val availability: Boolean,
+    @ColumnInfo(name = "iconPath") val iconPath: String, // TODO chyba int
 
 )

@@ -17,11 +17,11 @@ interface userCreatedQuotes {
 
 
     // Usuwanie konkretnego cytatu po jego ID
-    @Query("DELETE FROM UserCreatedQuotes WHERE id_card = :idQuote")
+    @Query("DELETE FROM UserCreatedQuotes WHERE cardId = :idQuote")
     suspend fun deleteQuote(idQuote: Int)
 
-    @Query("SELECT id_card, id_user, quote as quoteContent FROM UserCreatedQuotes WHERE id_user = :idUser")
-    suspend fun getCreatedQuotes(idUser: Int): List<CreateNewQuoteModel>
+    @Query("SELECT cardId,quote as quoteContent FROM UserCreatedQuotes")
+    suspend fun getCreatedQuotes(): List<CreateNewQuoteModel>
 
 
 }

@@ -1,45 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".homepage.HomeFragment">
 
-    tools:context=".nawigation.HomeFragment">
-
-
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <include layout="@layout/home_page_nawigation_top" />
 
+    </com.google.android.material.appbar.AppBarLayout>
 
-        <TextView
-            android:id="@+id/chapter_1"
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="64dp"
-            android:gravity="center_horizontal|top"
-            android:text="@string/chapter_1" />
-
-        <TextView
-            android:id="@+id/i_m_ready_t"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/chapter_1_quote" />
+            android:orientation="vertical">
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/testRecycler"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            <include layout="@layout/chapter1"/>
+            <include layout="@layout/chapter2"/>
+            <include layout="@layout/chapter3"/>
+            <include layout="@layout/chapter4"/>
+            <include layout="@layout/chapter5"/>
+            <include layout="@layout/chapter6"/>
+            <include layout="@layout/chapter7"/>
+            <include layout="@layout/chapter8"/>
 
-            />
-    </LinearLayout>
 
-</FrameLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

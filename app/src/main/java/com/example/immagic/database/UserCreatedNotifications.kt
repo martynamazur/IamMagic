@@ -10,19 +10,17 @@ import androidx.room.PrimaryKey
     foreignKeys = [
         ForeignKey(
             entity = CategoryCardSet::class,
-            parentColumns = ["id_cardSet"],
-            childColumns = ["id_cardSet"],
+            parentColumns = ["cardSetId"],
+            childColumns = ["cardSetId"],
 
         )
     ]
 )
 data class UserCreatedNotifications(
-    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id_notification") val id_notification: Int = 0,
-    @ColumnInfo(name = "id_cardSet") val idCardSet: Int,
-    @ColumnInfo(name = "status") val status: Int,
-    @ColumnInfo(name = "time_start") val timeStart: String, // Godzina i minuta jako tekst (np. "10:30")
-    @ColumnInfo(name = "time_end") val timeEnd: String, // Godzina i minuta jako tekst (np. "11:00")
-    @ColumnInfo(name = "time_start_indicator") val timeStartIndicator: String, //am or pm
-    @ColumnInfo(name = "time_end_indicator") val timeEndIndicator: String,
-    @ColumnInfo(name = "name") val name: String
+    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "notificationId") val notificationId: Int = 0,
+    @ColumnInfo(name = "cardSetId") val cardSetId: Int,
+    @ColumnInfo(name = "status") val status: Boolean,
+    @ColumnInfo(name = "timeStart") val timeStart: String,
+    @ColumnInfo(name = "timeEnd") val timeEnd: String,
+
 )

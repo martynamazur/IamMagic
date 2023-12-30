@@ -18,7 +18,7 @@
         android:paddingBottom="18dp">
 
         <TextView
-            android:id="@+id/textView46"
+            android:id="@+id/levelTopBar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"

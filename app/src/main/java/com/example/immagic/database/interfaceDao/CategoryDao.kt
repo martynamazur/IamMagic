@@ -12,13 +12,13 @@ interface CategoryDao {
     @Insert
     suspend fun insert(category: Category)
 
-    @Query("SELECT * FROM Category WHERE unlocked_status = 1")
+    @Query("SELECT * FROM Category WHERE availability = 1")
     suspend fun getAvaiableCategories(): List<CategoryModel>
 
-    @Query("UPDATE Category SET unlocked_status = 1 WHERE id_category = :idCardToUnlock")
+    @Query("UPDATE Category SET availability = 1 WHERE categoryId = :idCardToUnlock")
     suspend fun changeCategoryStatusToActive(idCardToUnlock: Int)
 
-    @Query("UPDATE Category SET unlocked_status = 0 WHERE id_category = :idCardToLock")
+    @Query("UPDATE Category SET availability = 0 WHERE categoryId = :idCardToLock")
     suspend fun changeCategoryStatusToInActive(idCardToLock: Int)
 
 

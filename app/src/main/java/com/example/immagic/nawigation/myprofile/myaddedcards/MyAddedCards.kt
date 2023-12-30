@@ -66,7 +66,7 @@ class MyAddedCards: AppCompatActivity() {
                 val db = AppDatabase.getInstance(applicationContext)
 
                 // Pobierz listę rekordów z bazy danych
-                val quotesList = db.userCreatedQuotes().getCreatedQuotes(1)
+                val quotesList = db.userCreatedQuotes().getCreatedQuotes()
 
                 // Przekaż listę do funkcji obsługującej stan
                 handleListState(quotesList)

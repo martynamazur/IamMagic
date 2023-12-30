@@ -34,8 +34,8 @@ class FavListFragment : Fragment() {
     }
 
     fun getList(){
-        val database: AppDatabase = AppDatabase.getInstance(requireContext())
-        val likedQuotes: List<LikedQuotesModel> = database.userActionsQuotesDao().getLikedQuotes(1)
-        println("ile jest"+likedQuotes.size)
+        //val database: AppDatabase = AppDatabase.getInstance(requireContext())
+        //val likedQuotes: List<LikedQuotesModel> = database.userActionsQuotesDao().getLikedQuotes(1)
+        //println("ile jest"+likedQuotes.size)
     }
 }

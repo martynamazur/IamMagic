@@ -92,7 +92,7 @@ class MyAddedCardsNotEmptyList : Fragment() {
             withContext(Dispatchers.IO) {
                 val applicationContext = requireContext().applicationContext
                 val db = AppDatabase.getInstance(applicationContext)
-                val quotesList = db.userCreatedQuotes().getCreatedQuotes(1)
+                val quotesList = db.userCreatedQuotes().getCreatedQuotes()
 
                 // Aktualizuj LiveData w ViewModel
                 viewModel.updateQuotesList(quotesList)

@@ -4,8 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.example.immagic.data.Converters
 import com.example.immagic.database.interfaceDao.*
 
 @Database(
@@ -14,33 +16,37 @@ import com.example.immagic.database.interfaceDao.*
         UserActionsQuote::class,
         CourseCardSet::class,
         Course::class,
-        Chapter::class,
         Category::class,
         Level::class,
+        LevelBonus::class,
+        UnlockedFunction::class,
         CategoryCardSet::class,
         Subcategory::class,
-        Shop::class,
-        NotificationDay::class,
         UserCreatedNotifications::class,
         UserCreatedQuotes::class,
         TreasureChest::class,
         ChestReward::class,
         Rewards::class,
         UserEquipment::class,
+        LoginHistoryLog::class,
+        CardSetPrice::class,
+        CardSetLevel::class
 
                ],
 
     version = 1, exportSchema = false
 )
+@TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
 
-    abstract fun userDao(): userDao
+    abstract fun userDao(): UserDao
     abstract fun userActionsQuotesDao(): userActionsQuotesDao
-    abstract fun courseDao(): courseDao
+    abstract fun courseDao(): CourseDao
     abstract fun userCreatedQuotes(): userCreatedQuotes
     abstract fun treasureChest(): TreasureChestDao
     abstract fun userEquimpment(): UserEquimpmentDao
     abstract fun category(): CategoryDao
+    abstract fun loginHistoryLog(): LoginHistoryLogDao
     //abstract fun loginHistory(): LoginHistory
 
 

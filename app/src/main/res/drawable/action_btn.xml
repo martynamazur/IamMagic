@@ -2,9 +2,10 @@
 
     <item>
         <shape android:shape="oval">
-            <solid android:color="#00000000" /> <!-- Transparentne tło -->
-            <corners android:radius="8dp" /> <!-- Zakrąglenie rogów -->
-            <stroke android:color="#808080" android:width="2dp" /> <!-- Kolor obramowania -->
+            <solid android:color="#00000000" />
+            <corners android:radius="27dp" />
+            <size android:width="54dp" android:height="54dp"/>
+            <stroke android:color="#CDCDE7" android:width="1dp" />
         </shape>
     </item>
 

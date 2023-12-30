@@ -10,15 +10,15 @@ foreignKeys = [
     ForeignKey(
         entity = TreasureChest::class,
         parentColumns = ["chestId"],
-        childColumns = ["chest_id"],
+        childColumns = ["chestId"],
         onDelete = ForeignKey.CASCADE,
         onUpdate = ForeignKey.CASCADE
 
     ),
     ForeignKey(
         entity = Rewards::class,
-        parentColumns = ["reward_id"],
-        childColumns = ["reward_id"],
+        parentColumns = ["rewardId"],
+        childColumns = ["rewardId"],
         onDelete = ForeignKey.CASCADE,
         onUpdate = ForeignKey.CASCADE
     )
@@ -27,8 +27,8 @@ foreignKeys = [
 )
 data class ChestReward(
 
-    @PrimaryKey @ColumnInfo(name = "reward_id") val rewardId: Int,
-    @ColumnInfo(name = "chest_id") val chestId: Int,
+    @PrimaryKey @ColumnInfo(name = "rewardId") val rewardId: Int,
+    @ColumnInfo(name = "chestId") val chestId: Int,
 
 
 )

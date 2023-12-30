@@ -1,6 +1,9 @@
 package com.example.immagic.database
 
+import java.util.*
+
 data class LoginHistoryModel(
-    val time: String,
-    val userId: String
+    val loginTime: Date,
+    val loginHistoryId: Int
+
 )

@@ -7,16 +7,16 @@ import androidx.room.ForeignKey
 @Entity(tableName = "Subcategories_bridge",
     foreignKeys = [
         ForeignKey( entity = Category::class,
-        parentColumns = ["id_category"],
-        childColumns = ["id_category"]),
+        parentColumns = ["categoryId"],
+        childColumns = ["categoryId"]),
 
         ForeignKey( entity = Subcategory::class,
-            parentColumns = ["id_subcategory"],
-            childColumns = ["id_subcategory"]),
+            parentColumns = ["subcategoryId"],
+            childColumns = ["subcategoryId"]),
     ]
 
 )
 data class SubcategoriesBridge(
-    @ColumnInfo(name = "id_category") val idCategory: Int, // Klucz obcy do tabeli Category
-    @ColumnInfo(name = "id_subcategory") val idSubcategory: Int // Klucz obcy do tabeli Subcategory
+    @ColumnInfo(name = "categoryId") val categoryId: Int, // Klucz obcy do tabeli Category
+    @ColumnInfo(name = "subcategoryId") val subcategoryId: Int // Klucz obcy do tabeli Subcategory
 )

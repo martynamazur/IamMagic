@@ -46,23 +46,16 @@ class SetFirstLanguage : AppCompatActivity() {
         continueBtnSetLanguageFirstTime.setOnClickListener {
             val selectedLanguage = languageAdapter.getSelectedLanguage()
             PreferenceHelper.changeLanguage(selectedLanguage.toString())
-            saveUserAndChangeLanguage(selectedLanguage.toString())
+            changeLanguage(selectedLanguage.toString())
         }
     }
 
-    private fun saveUserAndChangeLanguage(language: String) {
-        lifecycleScope.launch {
-            withContext(Dispatchers.IO) {
-                val db = AppDatabase.getInstance(applicationContext)
+    private fun changeLanguage(language: String) {
 
-                val userDao = db.userDao()
-                val newUser = User(username = "", languageVersion = language)
-                userDao.insert(newUser)
-                changeAppLanguage(language)
-            }
-            startOnboardingActivity()
+        changeAppLanguage(language)
+        startOnboardingActivity()
         }
-    }
+
 
 
     private fun changeAppLanguage(languageCode: String) {

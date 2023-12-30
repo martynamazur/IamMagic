@@ -48,7 +48,7 @@ class AddNewCardDialog(
         withContext(Dispatchers.IO) {
             val applicationContext = dialog.context.applicationContext
             val db = AppDatabase.getInstance(applicationContext)
-            val newQuote = UserCreatedQuotes(id_user = userId, quote = quoteContent)
+            val newQuote = UserCreatedQuotes( quote = quoteContent)
             db.userCreatedQuotes().addNewQuote(newQuote)
         }
     }

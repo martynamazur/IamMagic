@@ -1,9 +1,9 @@
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/empty_icon_like">
-        <bitmap android:src="@drawable/like_icon" />
-    </item>
+    <!-- More specific item (less general) -->
+    <item android:state_pressed="true" android:drawable="@drawable/filled_like_icon" />
 
-    <item android:id="@+id/filled_icon_like" android:drawable="@drawable/filled_like_icon" />
-</layer-list>
+    <!-- General item (more general) -->
+    <item android:drawable="@drawable/like_icon" />
 
+</selector>

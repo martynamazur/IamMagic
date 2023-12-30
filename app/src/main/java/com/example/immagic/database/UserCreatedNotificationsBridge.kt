@@ -6,21 +6,22 @@ import androidx.room.ForeignKey
 
 @Entity(
     tableName = "UserCreatedNotificationsBridge",
-    primaryKeys = ["id_user", "id_notification"],
+    primaryKeys = ["userId", "notificationId"],
     foreignKeys = [
         ForeignKey(
             entity = User::class,
-            parentColumns = ["id_user"],
-            childColumns = ["id_user"]
+            parentColumns = ["userId"],
+            childColumns = ["userId"]
         ),
         ForeignKey(
             entity = UserCreatedNotifications::class,
-            parentColumns = ["id_notification"],
-            childColumns = ["id_notification"]
+            parentColumns = ["notificationId"],
+            childColumns = ["notificationId"]
         )
     ]
 )
 data class UserCreatedNotificationsBridge(
-    @ColumnInfo(name="id_user") val idUser: Int,
-    @ColumnInfo(name="notification_id") val notificationId: Int
+    @ColumnInfo(name = "userId") val userId: Int,
+    @ColumnInfo(name = "notificationId") val notificationId: Int
 )
+

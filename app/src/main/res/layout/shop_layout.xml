@@ -33,13 +33,13 @@
                 android:layout_marginEnd="8dp"/>
 
             <TextView
-                android:id="@+id/textView52"
+                android:id="@+id/alchemyPointsWallet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text= "@string/alchemy_points_default" />
 
             <ImageView
-                android:id="@+id/imageView10"
+
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_weight="0"
@@ -54,7 +54,7 @@
                 android:text="Puzzel:" />
 
             <TextView
-                android:id="@+id/textView55"
+                android:id="@+id/puzzlePointsWallet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
@@ -88,8 +88,10 @@
                 android:id="@+id/watchAddBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Zdobyć butelki alchemiczne"
+                android:text="@string/gainAlchemyBoottlesBtn"
                 android:background="@drawable/watch_add_background"
+                android:drawableEnd="@drawable/alchemy_bottle"
+
                 android:textAllCaps="false"
                 android:layout_marginTop="25dp"
                 android:layout_marginBottom="25dp"/>
@@ -168,7 +170,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/backgroundsRc"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="80dp">
 
             </androidx.recyclerview.widget.RecyclerView>
 

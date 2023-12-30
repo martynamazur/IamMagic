@@ -1,0 +1,24 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Stan ON -->
+    <item android:state_checked="true">
+        <shape>
+            <!-- Kolor tła ścieżki w stanie ON -->
+            <solid android:color="@color/corner_dark_violet" />
+            <!-- Kolor kciuka w stanie ON -->
+            <size android:width="32dp" android:height="32dp" />
+            <solid android:color="@color/primary_violet" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    <!-- Stan OFF -->
+    <item android:state_checked="false">
+        <shape>
+            <!-- Kolor tła ścieżki w stanie OFF -->
+            <solid android:color="@color/progress_bar_grey" />
+            <!-- Kolor kciuka w stanie OFF -->
+            <size android:width="32dp" android:height="32dp" />
+            <solid android:color="@color/white" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</selector>

@@ -6,20 +6,26 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.room.RoomWarnings
 import com.example.immagic.R
 import com.example.immagic.database.AppDatabase
-import com.example.immagic.database.User
-import com.example.immagic.nawigation.categories.shop.BackgroundsAdapter
-import com.example.immagic.nawigation.categories.shop.MagicChestAdapter
-import com.example.immagic.nawigation.categories.shop.treasurechest.ChestDialogRepository
+import com.example.immagic.nawigation.categories.shop.backgrounds.BackgroundsAdapter
+import com.example.immagic.nawigation.categories.shop.backgrounds.BackgroundsItemModel
+import com.example.immagic.nawigation.categories.shop.boosts.BoostAdapter
+import com.example.immagic.nawigation.categories.shop.boosts.BoostersItemModel
+import com.example.immagic.nawigation.categories.shop.freez.FreezStreakAdapter
+import com.example.immagic.nawigation.categories.shop.freez.FreezStreakItemModel
 import com.example.immagic.nawigation.categories.shop.treasurechest.ChestDialogRepositoryImpl
 import com.example.immagic.nawigation.categories.shop.treasurechest.ChestDialogViewModel
+import com.example.immagic.nawigation.categories.shop.treasurechest.MagicChestAdapter
+import com.example.immagic.nawigation.categories.shop.treasurechest.MagicChestItemModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 
@@ -46,6 +52,10 @@ class ShopFragment : Fragment() {
     private lateinit var backgroundsList: List<BackgroundsItemModel>
 
     private lateinit var coinsToolbar: LinearLayout
+    private lateinit var puzzlePointsWallet: TextView
+    private lateinit var alchemyPointsWallet: TextView
+
+    private lateinit var shopRepositoryImp: ShopRepositoryImp
 
 
 
@@ -53,6 +63,13 @@ class ShopFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.shop_layout, container, false)
 
+        puzzlePointsWallet = view.findViewById(R.id.puzzlePointsWallet)
+        alchemyPointsWallet = view.findViewById(R.id.alchemyPointsWallet)
+        shopRepositoryImp =ShopRepositoryImp(requireContext())
+        setUiWalletBar()
+
+
+        //Zmienic i wyciagnac z bazy danych informacje + dorobic nowe tabelki
         // Inicjalizacja magicChestList
         magicChestList = listOf(
             MagicChestItemModel("Magic Chest 1", R.drawable.basicchest),//
@@ -84,6 +101,8 @@ class ShopFragment : Fragment() {
             )
 
 
+
+
         removeAddsBtn = view.findViewById(R.id.removeAddsBtn)
         watchAddBtn = view.findViewById(R.id.watchAddBtn)
 
@@ -95,24 +114,21 @@ class ShopFragment : Fragment() {
         // Inicjalizacja magicChestAdapter
         val chestDialogViewModel = ViewModelProvider(this)[ChestDialogViewModel::class.java]
         val chestDialogRepository = ChestDialogRepositoryImpl(requireContext(), chestDialogViewModel)
+        val paymentManager = PaymentManager(shopRepository = shopRepositoryImp, requireContext())
 
         magicChestAdapter = MagicChestAdapter(requireContext(), magicChestList, chestDialogViewModel, chestDialogRepository)
         magicChestRc.adapter = magicChestAdapter
 
 
-
-        // Inicjalizacja freezStreakAdapter
-        freezStreakAdapter = FreezStreakAdapter(requireContext(), freezStreakList)
+        freezStreakAdapter = FreezStreakAdapter(requireContext(), freezStreakList, paymentManager )
         freezStreakRc.adapter = freezStreakAdapter
 
-        // Inicjalizacja boostAdapter
-        boostAdapter = BoostAdapter(requireContext(), boostList)
+
+        boostAdapter = BoostAdapter(requireContext(), boostList, paymentManager)
         boostersRc.adapter = boostAdapter
 
-        // Inicjalizacja backgroundsAdapter
-        backgroundsAdapter = BackgroundsAdapter(requireContext(), backgroundsList)
+        backgroundsAdapter = BackgroundsAdapter(requireContext(), backgroundsList,paymentManager)
         backgroundsRc.adapter = backgroundsAdapter
-
 
 
         magicChestRc.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
@@ -122,24 +138,33 @@ class ShopFragment : Fragment() {
 
 
 
-        removeAddsBtn.setOnClickListener {  }
-        watchAddBtn.setOnClickListener {  }
+        removeAddsBtn.setOnClickListener {
+            //TODO: Remove adds
+        }
+        watchAddBtn.setOnClickListener {
+            //TODO: Watch add to gain coins
+        }
 
 
 
         return view
     }
 
-    suspend fun getUserCoins(): Int{
-        return try {
-            withContext(Dispatchers.IO){
-                val db = AppDatabase.getInstance(requireContext())
-                val user = db.userDao()
-                user.getAlchemyPoints(1)
+    private fun setUiWalletBar() {
+        lifecycleScope.launch {
+            try {
+                withContext(Dispatchers.IO) {
+                    val userCoins = shopRepositoryImp.getUserCoins()
+                    val userPuzzle = shopRepositoryImp.getUserPuzzle()
+
+                    withContext(Dispatchers.Main) {
+                        alchemyPointsWallet.text = userCoins.toString()
+                        puzzlePointsWallet.text = userPuzzle.toString()
+                    }
+                }
+            } catch (_: Exception) {
+
             }
-        }catch (e: Exception){
-            e.printStackTrace()
-            throw e
         }
     }
 

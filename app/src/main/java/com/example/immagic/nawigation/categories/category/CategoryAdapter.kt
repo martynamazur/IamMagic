@@ -11,7 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.immagic.R
-import com.example.immagic.nawigation.categories.OnSettingItemClickListenerCategory
+import com.example.immagic.nawigation.categories.category.categoryselection.CategorySelection
 
 class CategoryAdapter(
     private val context: Context,

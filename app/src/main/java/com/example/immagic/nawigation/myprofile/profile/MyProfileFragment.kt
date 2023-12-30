@@ -14,9 +14,6 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 class MyProfileFragment : Fragment() {
 
-
-
-
     companion object {
         fun newInstance(): MyProfileFragment {
             return MyProfileFragment()
@@ -30,11 +27,8 @@ class MyProfileFragment : Fragment() {
         val viewPager: ViewPager2 = view.findViewById(R.id.viewPagerMyProfile)
 
 
-
-
         val adapter = MyProfilePagerAdapter(requireActivity())
         viewPager.adapter = adapter
-
 
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
@@ -45,11 +39,6 @@ class MyProfileFragment : Fragment() {
             }
 
         }.attach()
-
-
-
-
-
 
         return view
     }

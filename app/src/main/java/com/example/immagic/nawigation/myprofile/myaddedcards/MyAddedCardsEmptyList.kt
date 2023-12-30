@@ -44,7 +44,7 @@ class MyAddedCardsEmptyList : Fragment() {
                         val applicationContext = requireContext().applicationContext
                         val db = AppDatabase.getInstance(applicationContext)
                         //val createdQuote =  CreateNewQuoteModel(quotesInput)
-                        val newQuote = UserCreatedQuotes(id_user = 1, quote = "Nowy cytujacy cytat")
+                        val newQuote = UserCreatedQuotes( quote = "Nowy cytujacy cytat")
                         db.userCreatedQuotes().addNewQuote(newQuote)
                         // Tworzenie nowego obiektu UserCreatedQuotes
                         dialog.dismiss()

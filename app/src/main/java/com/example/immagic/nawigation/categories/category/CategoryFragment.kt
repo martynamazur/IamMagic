@@ -34,7 +34,7 @@ class CategoryFragment : Fragment() {
         lifecycleScope.launch {
             try {
                 categoryList = categoryRepository.getCategories()
-                categoryAdapter = CategoryAdapter(this@CategoryFragment, requireContext(), categoryList)
+                categoryAdapter = CategoryAdapter(requireContext(), categoryList)
                 categoriesRc = view.findViewById(R.id.categoriesRc)
 
 

@@ -141,6 +141,26 @@
     <string name="RandomRewards">Rewards</string>
     <string name="alchemybottless">Alchemy bottles:</string>
     <string name="default_number">0</string>
+    <string name="alert_message_insuficient_funds">Insufficient funds for purchase</string>
+    <string name="set_username">What\'s your name ?</string>
+    <string name="default_enerygy_number">0%</string>
+    <string name="lv_headline">LV</string>
+    <string name="premiumHeadline">Premium</string>
+    <string name="special">Special categories</string>
+    <string name="chapter_2">Chapter 2</string>
+    <string name="specialbasiccategory">Buy to unlock</string>
+    <string name="chapter_3">Chapter 3</string>
+    <string name="chapter_4">Chapter 4</string>
+    <string name="chapter_5">Chapter 5</string>
+    <string name="chapter_6">Chapter 6</string>
+    <string name="chapter_7">Chapter 7</string>
+    <string name="chapter_8">Chapter 8</string>
+    <string name="deafultZero">0</string>
+    <string name="repeatSet">Repeat set</string>
+    <string name="defaultHeadlineSettingsBeforePlay">I am magic</string>
+    <string name="voiceAssistant">Voice assistant</string>
+    <string name="showTimer">Show timer</string>
+    <string name="readOutLoudHeadline">Read out loud</string>
 
 
 </resources>

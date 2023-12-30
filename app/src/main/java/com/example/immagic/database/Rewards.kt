@@ -7,9 +7,9 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "Rewards")
 data class Rewards(
 
-    @PrimaryKey @ColumnInfo(name = "reward_id") val rewardId: Int,
-    @ColumnInfo(name = "reward_type") val rewardType: String,
-    @ColumnInfo(name = "amount") val amount: Int
-
+    @PrimaryKey @ColumnInfo(name = "rewardId") val rewardId: Int,
+    @ColumnInfo(name = "rewardType") val rewardType: String,
+    @ColumnInfo(name = "quantity") val amount: Int,
+    @ColumnInfo(name = "rewardIconResourceId") val rewardIconResourdeId: Int
 
 )

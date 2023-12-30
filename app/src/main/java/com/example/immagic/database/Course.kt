@@ -1,33 +1,26 @@
 package com.example.immagic.database
 
 import androidx.room.*
-import com.example.immagic.database.Chapter
-import com.example.immagic.database.CourseCardSet
 
 @Entity(
-    tableName = "com.example.immagic.database.Course",
+    tableName = "Course",
     foreignKeys = [
-        ForeignKey(
-            entity = Chapter::class,
-            parentColumns = ["chapter_id"],
-            childColumns = ["chapter_id"],
-            onDelete = ForeignKey.CASCADE,
-            onUpdate = ForeignKey.CASCADE
-        ),
+
         ForeignKey(
             entity = CourseCardSet::class,
-            parentColumns = ["id_cardSet"], // Zmieniono na właściwą kolumnę w CourseCardSet
-            childColumns = ["cardSet_id"],
+            parentColumns = ["cardSetId"],
+            childColumns = ["cardSetId"],
             onDelete = ForeignKey.CASCADE,
             onUpdate = ForeignKey.CASCADE
         )
-    ]
+    ],
+    indices = [Index(value = ["cardSetId"], unique = true)]
 )
 data class Course(
-    @PrimaryKey @ColumnInfo(name = "course_id") val courseId: Int,
-    @ColumnInfo(name = "chapter_id") val chapterId: Int,
-    @ColumnInfo(name = "cardSet_id") val cardSetId: Int,
-    @ColumnInfo(name = "course_name") val courseName: String,
-    @ColumnInfo(name = "locked_status") val lockedStatus: Boolean,
-    @ColumnInfo(name = "subscription_type") val subscriptionType: Boolean
+    @PrimaryKey @ColumnInfo(name = "courseId") val courseId: Int,
+    @ColumnInfo(name = "chapterId") val chapterId: Int,
+    @ColumnInfo(name = "cardSetId") val cardSetId: Int,
+    @ColumnInfo(name = "courseName") val courseName: String,
+    @ColumnInfo(name = "lockedStatus") val lockedStatus: Boolean,
+    @ColumnInfo(name = "subscriptionType") val subscriptionType: Boolean
 )
