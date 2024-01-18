@@ -1,4 +1,4 @@
-package com.example.immagic.database
+package com.example.bottomsheettest.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

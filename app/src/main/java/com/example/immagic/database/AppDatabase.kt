@@ -7,11 +7,15 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.example.bottomsheettest.database.*
+import com.example.bottomsheettest.database.interf.*
 import com.example.immagic.data.Converters
 import com.example.immagic.database.interfaceDao.*
+import java.io.FileOutputStream
 
 @Database(
-    entities = [User::class,
+    entities = [
+        User::class,
         Quote::class,
         UserActionsQuote::class,
         CourseCardSet::class,
@@ -30,7 +34,8 @@ import com.example.immagic.database.interfaceDao.*
         UserEquipment::class,
         LoginHistoryLog::class,
         CardSetPrice::class,
-        CardSetLevel::class
+        CardSetLevel::class,
+        SubcategoriesBridge::class
 
                ],
 
@@ -40,14 +45,24 @@ import com.example.immagic.database.interfaceDao.*
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
-    abstract fun userActionsQuotesDao(): userActionsQuotesDao
-    abstract fun courseDao(): CourseDao
-    abstract fun userCreatedQuotes(): userCreatedQuotes
-    abstract fun treasureChest(): TreasureChestDao
-    abstract fun userEquimpment(): UserEquimpmentDao
+    abstract fun cardSetLevel(): CardSetLevelDao
+    abstract fun cardSetPrice(): CardSetPriceDao
+    abstract fun course(): CourseDao
     abstract fun category(): CategoryDao
+    abstract fun subCategory(): SubcategoryDao
+    abstract fun treasureChest(): TreasureChestDao
+    abstract fun rewards(): RewardsDao
+    abstract fun chestReward(): ChestRewardDao
+    abstract fun level(): LevelDao
+    abstract fun courseCardSet(): CourseCardSetDao
     abstract fun loginHistoryLog(): LoginHistoryLogDao
-    //abstract fun loginHistory(): LoginHistory
+
+    abstract fun levelBonus(): LevelBonusDao
+    abstract fun userCreatedQuotes(): UserCreatedQuotesDao
+    abstract fun userEquimpment(): UserEquipmentDao
+
+    abstract fun quote(): QuoteDao
+    abstract fun userActionsQuote(): UserActionsQuoteDao
 
 
     companion object {
@@ -61,23 +76,53 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
-        private val MIGRATION_2_3 = object : Migration(2, 3) {
-            override fun migrate(database: SupportSQLiteDatabase) {
-                // Migracja z wersji 2 do 3
-                // Wykonaj inne zmiany w bazie danych
-            }
-        }
 
         fun getInstance(context: Context): AppDatabase {
             return INSTANCE ?: synchronized(this) {
-                val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    AppDatabase::class.java,
-                    "mydatabase"
-                ).addMigrations(MIGRATION_1_2).build()
+                val instance = buildDatabase(context.applicationContext)
                 INSTANCE = instance
                 instance
             }
         }
+
+        private fun buildDatabase(appContext: Context): AppDatabase {
+            val builder = Room.databaseBuilder(
+                appContext,
+                AppDatabase::class.java,
+                "mydatabase"
+            ).addMigrations(MIGRATION_1_2)
+
+            if (!databaseExists(appContext, "mydatabase")) {
+                // Wywołaj funkcję kopiującą dane tylko jeśli baza danych jeszcze nie istnieje
+                copyDataToDatabase(appContext)
+            }
+
+            return builder.build()
+        }
+
+
+        private fun copyDatabaseFromAssets(context: Context, assetFileName: String, destinationPath: String) {
+            val inputStream = context.assets.open("database/$assetFileName")
+            val outputStream = FileOutputStream(destinationPath)
+
+            inputStream.use { input ->
+                outputStream.use { output ->
+                    input.copyTo(output)
+                }
+            }
+        }
+
+        private fun copyDataToDatabase(context: Context) {
+            val destinationPath = context.getDatabasePath("mydatabase").absolutePath
+            copyDatabaseFromAssets(context, "mydatabase.sqlite", destinationPath)
+        }
+
+        private fun databaseExists(context: Context, databaseName: String): Boolean {
+            val dbFile = context.getDatabasePath(databaseName)
+            return dbFile.exists()
+        }
+
+
+
     }
 }

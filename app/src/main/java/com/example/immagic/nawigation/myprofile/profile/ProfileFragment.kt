@@ -14,8 +14,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.immagic.R
 
 import com.example.immagic.nawigation.myprofile.myaddedcards.MyAddedCards
+import com.example.immagic.nawigation.myprofile.myequipment.MyEquipment
 import com.example.immagic.nawigation.myprofile.myrecordings.MyRecordings
-import com.example.immagic.nawigation.myprofile.myshop.MyShop
+
 import kotlinx.coroutines.launch
 
 
@@ -51,7 +52,7 @@ class ProfileFragment : Fragment() {
 
         myCardsProfile = view.findViewById(R.id.myCardsProfile)
         myRecordings = view.findViewById(R.id.myRecordings)
-        myEquipment = view.findViewById(R.id.shopBtnProfile)
+        myEquipment = view.findViewById(R.id.equipmentBtnProfile)
         helloName = view.findViewById(R.id.helloName)
 
         statisticModelList = ArrayList()
@@ -61,6 +62,7 @@ class ProfileFragment : Fragment() {
         statisticAdapter = StatisticAdapter(statisticModelList)
         statisticRc.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         statisticRc.adapter = statisticAdapter
+
 
         profileViewModel.helloName.observe(viewLifecycleOwner
         ) { newName -> helloName.text = newName }
@@ -84,6 +86,7 @@ class ProfileFragment : Fragment() {
         myEquipment.setOnClickListener {
             val intent = Intent(requireContext(), MyEquipment::class.java)
             startActivity(intent)
+
         }
         
         return view

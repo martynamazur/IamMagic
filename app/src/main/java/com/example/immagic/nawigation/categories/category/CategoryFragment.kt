@@ -37,7 +37,6 @@ class CategoryFragment : Fragment() {
                 categoryAdapter = CategoryAdapter(requireContext(), categoryList)
                 categoriesRc = view.findViewById(R.id.categoriesRc)
 
-
                 categoriesRc.adapter = categoryAdapter
                 categoriesRc.layoutManager = LinearLayoutManager(requireContext())
 

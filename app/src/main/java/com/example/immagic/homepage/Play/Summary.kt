@@ -1,4 +1,4 @@
-package com.example.immagic.Play
+package com.example.immagic.homepage.Play
 
 import android.content.Intent
 import android.os.Bundle

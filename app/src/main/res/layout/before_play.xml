@@ -81,27 +81,27 @@
                 android:layout_marginBottom="20dp"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/imageView14"
+                <ImageButton
+                    android:id="@+id/repeatSetMinus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    app:srcCompat="@drawable/minusicon" />
+                    android:src="@drawable/minusicon"
+                    />
 
                 <TextView
-                    android:id="@+id/textView58"
+                    android:id="@+id/repeatSetNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/deafultZero"
                     android:textColor="@color/text_common"
                     android:textSize="32sp" />
 
-                <ImageView
-                    android:id="@+id/imageView16"
+                <ImageButton
+                    android:id="@+id/repeatSetPlus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
-                    app:srcCompat="@drawable/plusicon" />
+                    android:src="@drawable/plusicon"/>
 
 
             </LinearLayout>
@@ -285,7 +285,7 @@
                 android:orientation="horizontal">
 
                 <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/switch5"
+                    android:id="@+id/readOutLoudSwitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:trackTint="@color/inactive_text_grey"

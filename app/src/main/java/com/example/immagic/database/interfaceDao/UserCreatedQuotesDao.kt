@@ -1,15 +1,13 @@
 package com.example.immagic.database.interfaceDao
 
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.example.immagic.createquote.CreateNewQuoteModel
-import com.example.immagic.createquote.UserCreatedQuote
 import com.example.immagic.database.UserCreatedQuotes
 
 @Dao
-interface userCreatedQuotes {
+interface UserCreatedQuotesDao {
 
     // Dodawanie nowego cytatu
     @Insert

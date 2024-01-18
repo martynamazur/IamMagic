@@ -6,10 +6,10 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.bottomsheettest.database.User
 import com.example.immagic.R
 import com.example.immagic.database.AppDatabase
-import com.example.immagic.database.User
-import com.example.immagic.nawigation.myprofile.settings.SettingsImpl
+
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -45,7 +45,7 @@ class SetName: AppCompatActivity() {
             withContext(Dispatchers.IO) {
                 val db = AppDatabase.getInstance(applicationContext)
                 val userDao = db.userDao()
-                val newUser = User(iconResourceId = "test", username = username)
+                val newUser = User(1,"mati","icon",)
                 userDao.insert(newUser)
 
             }

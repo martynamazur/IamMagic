@@ -6,20 +6,13 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "UserCreatedNotifications",
-    foreignKeys = [
-        ForeignKey(
-            entity = CategoryCardSet::class,
-            parentColumns = ["cardSetId"],
-            childColumns = ["cardSetId"],
-
-        )
-    ]
-)
+@Entity(tableName = "UserCreatedNotifications")
 data class UserCreatedNotifications(
-    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "notificationId") val notificationId: Int = 0,
+
+
+    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "notificationId") val notificationId: Int,
     @ColumnInfo(name = "cardSetId") val cardSetId: Int,
-    @ColumnInfo(name = "status") val status: Boolean,
+    @ColumnInfo(name = "status") val status: Int,
     @ColumnInfo(name = "timeStart") val timeStart: String,
     @ColumnInfo(name = "timeEnd") val timeEnd: String,
 

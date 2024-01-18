@@ -6,15 +6,7 @@ import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
 @Entity(
-    tableName = "UserCourseProgress",
-    foreignKeys = [
-        ForeignKey(
-            entity = CourseCardSet::class,
-            parentColumns = ["cardSetId"],
-            childColumns = ["cardSetId"]
-        )
-    ],
-    primaryKeys = ["cardSetId"]
+    tableName = "UserCourseProgress"
 )
 data class UserCourseProgress(
     @PrimaryKey @ColumnInfo(name = "cardSetId") val cardSetId: Int,

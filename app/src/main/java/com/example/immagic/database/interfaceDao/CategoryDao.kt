@@ -3,7 +3,9 @@ package com.example.immagic.database.interfaceDao
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.immagic.database.Category
+import com.example.bottomsheettest.database.Category
+
+
 import com.example.immagic.nawigation.categories.category.CategoryModel
 
 @Dao

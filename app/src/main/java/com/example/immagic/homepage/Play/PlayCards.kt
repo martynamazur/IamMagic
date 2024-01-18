@@ -1,15 +1,15 @@
-package com.example.immagic.nawigation.myprofile.profile
+package com.example.immagic.homepage.Play
 
 import android.os.Bundle
 import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.immagic.R
 
-class MyEquipment: AppCompatActivity() {
+class PlayCards : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.my_equipment) //TODO: stworzyc layout
-    }
 
+
+    }
 }

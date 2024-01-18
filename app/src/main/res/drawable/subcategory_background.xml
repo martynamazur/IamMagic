@@ -1,0 +1,11 @@
+<!-- rounded_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background shape -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+            <corners android:radius="30dp" />
+            <stroke android:width="2dp" android:color="@color/primary_violet" />
+        </shape>
+    </item>
+</layer-list>

@@ -3,7 +3,7 @@ package com.example.immagic.database.interfaceDao
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.immagic.database.LoginHistoryLog
+
 import com.example.immagic.database.LoginHistoryModel
 import java.util.Date
 

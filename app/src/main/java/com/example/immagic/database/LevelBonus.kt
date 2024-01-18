@@ -1,23 +1,14 @@
-package com.example.immagic.database
+package com.example.bottomsheettest.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
+import androidx.room.PrimaryKey
 
 
-@Entity(
-    tableName = "LevelBonus",
-    foreignKeys = [
-        ForeignKey(
-            entity = Level::class,
-            parentColumns = ["levelId"],
-            childColumns = ["levelId"]
-        )
-    ],
-    primaryKeys = ["levelId"]
-)
+@Entity(tableName = "LevelBonus")
 data class LevelBonus(
-    @ColumnInfo(name = "levelId") val levelId: Int,
+   @PrimaryKey @ColumnInfo(name = "levelId") val levelId: Int,
     @ColumnInfo(name = "alchemyLvUpPointsBonus") val alchemyLvUpPointsBonus: Int,
     @ColumnInfo(name = "unlockedCategoryId")val unlockedCategoryId: Int
 )

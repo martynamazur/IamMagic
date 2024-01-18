@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room.databaseBuilder
 import com.example.immagic.R
 import com.example.immagic.database.AppDatabase
-import com.example.immagic.database.User
+
 import com.example.immagic.help.PreferenceHelper
 import com.example.immagic.onboarding.OnBoardingActivity
 import kotlinx.coroutines.Dispatchers

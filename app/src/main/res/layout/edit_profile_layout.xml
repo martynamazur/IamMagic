@@ -17,7 +17,7 @@
         android:paddingBottom="18dp">
 
         <ImageButton
-            android:id="@+id/goBackBtnEditProfile"
+            android:id="@+id/equipmentGoBackBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"

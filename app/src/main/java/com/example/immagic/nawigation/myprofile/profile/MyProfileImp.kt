@@ -39,19 +39,24 @@ class MyProfileImp(private val context: Context): MyProfileRepository {
     }
 
     override suspend fun getUsername(): String {
-
-        return try{
+        return try {
             withContext(Dispatchers.IO) {
-                val username = AppDatabase.getInstance(context).userDao().getUsername(1)
-                println("test"+username)
-                "Hello $username"
+                val user = AppDatabase.getInstance(context).userDao().getUser(1)
+                if (user != null) {
+                    val username = user.username
+                    println("test $username")
+                    "Hello $username"
+                } else {
+                    "User not found"
                 }
-            }catch (e: Exception){
-                e.printStackTrace()
-                ":)"
             }
 
+        } catch (e: Exception) {
+            e.printStackTrace()
+            ":)"
+        }
     }
+
 
 
 

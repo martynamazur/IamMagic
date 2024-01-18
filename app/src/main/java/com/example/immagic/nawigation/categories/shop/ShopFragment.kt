@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.immagic.R
@@ -85,11 +86,13 @@ class ShopFragment : Fragment() {
         )
 
         // Inicjalizacja boostList
+        // Inicjalizacja boostList
         boostList = listOf(
-            BoostersItemModel("Booster 1","Booster 1", R.drawable.boostbasicicon, "100"),
-            BoostersItemModel("Booster 2","Booster 1", R.drawable.boostbasicicon, "500"),
-            BoostersItemModel("Booster 3","Booster 1", R.drawable.boostbasicicon, "1400")
+            BoostersItemModel(1, "Booster 1", "Booster 1", 2, "Boost 1 description", R.drawable.boostbasicicon, "100", "5 minutes"),
+            BoostersItemModel(2, "Booster 2", "Booster 2", 3, "Boost 2 description", R.drawable.boostbasicicon, "500", "10 minutes"),
+            BoostersItemModel(3, "Booster 3", "Booster 3", 4, "Boost 3 description", R.drawable.boostbasicicon, "1400", "15 minutes")
         )
+
 
         // Inicjalizacja backgroundsList
         backgroundsList = listOf(
@@ -134,7 +137,7 @@ class ShopFragment : Fragment() {
         magicChestRc.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         freezStreakRc.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         boostersRc.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
-        backgroundsRc.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        backgroundsRc.layoutManager = GridLayoutManager(context, 3)
 
 
 

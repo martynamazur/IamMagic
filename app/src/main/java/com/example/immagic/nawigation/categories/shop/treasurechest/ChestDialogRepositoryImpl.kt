@@ -3,7 +3,6 @@ package com.example.immagic.nawigation.categories.shop.treasurechest
 import android.content.Context
 import com.example.immagic.R
 import com.example.immagic.database.AppDatabase
-import com.example.immagic.database.interfaceDao.TreasureChestDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

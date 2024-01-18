@@ -1,4 +1,4 @@
-package com.example.immagic.database
+package com.example.bottomsheettest.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class Category(
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "categoryId") val categoryId: Int,
     @ColumnInfo(name = "categoryName") val categoryName: String,
-    @ColumnInfo(name = "availability") val availability: Boolean,
+    @ColumnInfo(name = "availability") val availability: Int,
     @ColumnInfo(name = "iconPath") val iconPath: String, // TODO chyba int
 
 )

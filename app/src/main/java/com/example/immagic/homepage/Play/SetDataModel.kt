@@ -1,4 +1,4 @@
-package com.example.immagic.Play
+package com.example.immagic.homepage.Play
 
 data class SetDataModel (
 

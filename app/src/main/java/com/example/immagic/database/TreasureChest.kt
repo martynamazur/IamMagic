@@ -1,4 +1,4 @@
-package com.example.immagic.database
+package com.example.bottomsheettest.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -9,6 +9,6 @@ data class TreasureChest(
     @PrimaryKey @ColumnInfo(name = "chestId") val chestId: Int,
     @ColumnInfo(name = "chestType") val chestType: String,
     @ColumnInfo(name = "price") val price: Int,
-    @ColumnInfo(name = "resourceIconId") val resourceIconId: Int
+    @ColumnInfo(name = "resourceIconId") val resourceIconId: String
 
 )

@@ -1,21 +1,26 @@
-package com.example.immagic.database.interfaceDao
+package com.example.bottomsheettest.database.interf
 
-import android.net.Uri
+
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.immagic.database.User
+import com.example.bottomsheettest.database.User
 import com.example.immagic.help.PreferenceHelper
 
-@Dao
 
+@Dao
 interface UserDao {
 
     @Insert
     suspend fun insert(user: User)
 
+    @Query("SELECT * FROM User WHERE userId = :idCurrentUser")
+    suspend fun getUser(idCurrentUser: Int = 1): User?
+
+
     @Query("SELECT username FROM User where userId = :idCurrentUser")
-    suspend fun getUsername(idCurrentUser: Int = PreferenceHelper.getCurrentUserId()): String
+    suspend fun getUsername(idCurrentUser: Int = 1): String?
+
 
     @Query("SELECT userLevel FROM User where userId = :idCurrentUser")
     suspend fun getUserLv(idCurrentUser: Int = PreferenceHelper.getCurrentUserId()): Int
@@ -30,6 +35,7 @@ interface UserDao {
     suspend fun getPuzzle(idCurrentUser: Int = PreferenceHelper.getCurrentUserId()): Int
 
 
+
     @Query("SELECT streak FROM User where userId = :idCurrentUser ")
     suspend fun getStreak(idCurrentUser: Int = PreferenceHelper.getCurrentUserId()): Int
 
@@ -42,6 +48,7 @@ interface UserDao {
 
     @Query("UPDATE User SET username = :newValue where userId = :idCurrentUser")
     suspend fun updateUsername(idCurrentUser: Int, newValue: String)
+
 
     @Query("UPDATE User SET iconResourceId = :newValue where userId = :idCurrentUser")
     suspend fun updateIcon(idCurrentUser: Int = PreferenceHelper.getCurrentUserId(), newValue: String)
@@ -67,6 +74,7 @@ interface UserDao {
 
     @Query("UPDATE User SET amountOfOwnedCards = :newValue where userId = :idCurrentUser")
     suspend fun updateOwnedCards(idCurrentUser: Int = PreferenceHelper.getCurrentUserId(), newValue: Int)
+
 }
 
 

@@ -6,6 +6,7 @@
 
 
 
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -48,8 +49,8 @@
         <activity android:name=".onboarding.OnBoardingActivity"/>
 
         <activity android:name=".MainActivity"/>
-        <activity android:name=".Play.Summary"/>
-        <activity android:name=".Play.QuoteActivity"/>
+        <activity android:name=".homepage.Play.Summary"/>
+        <activity android:name=".homepage.Play.QuoteActivity"/>
 
         <activity android:name=".nawigation.myprofile.settings.Theme"/>
         <activity android:name=".nawigation.myprofile.settings.EditProfile"/>
@@ -57,12 +58,20 @@
         <activity android:name=".nawigation.myprofile.settings.TermsOfService"/>
         <activity android:name=".nawigation.myprofile.settings.AboutUs"/>
         <activity android:name=".nawigation.myprofile.settings.SetLanguage"/>
+
         <activity android:name=".nawigation.myprofile.myaddedcards.MyCards"/>
         <activity android:name=".nawigation.myprofile.myrecordings.MyRecordings"/>
-        <activity android:name=".nawigation.myprofile.myshop.MyShop"/>
+        <activity android:name=".nawigation.myprofile.myequipment.MyEquipment"/>
         <activity android:name=".nawigation.myprofile.myaddedcards.MyAddedCards"/>
 
 
+        <activity android:name=".nawigation.categories.category.categoryselection.CategorySelection"/>
+        <activity android:name=".nawigation.categories.category.categoryselection.CategoryOverView"/>
+
+
+        <receiver
+            android:name=".backgroundtasks.MyAlarmReceiver"
+            android:exported="false" />
 
 
 

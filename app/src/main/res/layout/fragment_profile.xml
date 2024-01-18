@@ -87,7 +87,7 @@
             android:text="@string/my_recordings" />
 
         <Button
-            android:id="@+id/shopBtnProfile"
+            android:id="@+id/equipmentBtnProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/play_icon"
@@ -101,7 +101,7 @@
             android:gravity="left"
             android:drawablePadding="8dp"
             android:textAllCaps="false"
-            android:text="@string/shop_headline" />
+            android:text="@string/my_equipment" />
 
     </LinearLayout>
 

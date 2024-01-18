@@ -1,9 +1,8 @@
-package com.example.immagic.database.interfaceDao
+package com.example.bottomsheettest.database.interf
 
 import androidx.room.Dao
 
 @Dao
-interface CardSetPriceDao{
+interface CardSetPriceDao {
 
-    suspend fun getCardSetPrice(cardSetId: Int): Int
 }

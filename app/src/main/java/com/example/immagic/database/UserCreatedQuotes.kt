@@ -5,9 +5,8 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
-@Entity(
-    tableName = "UserCreatedQuotes",)
+@Entity(tableName = "UserCreatedQuotes")
 data class UserCreatedQuotes(
-    @PrimaryKey(autoGenerate = true) val cardId: Int = 0,
+    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "cardId") val cardId: Int,
     @ColumnInfo(name = "quote")val quote: String
 )

@@ -1,8 +1,6 @@
 package com.example.immagic.nawigation.myprofile.profile
 
-import com.example.immagic.database.interfaceDao.UserDao
-
- interface MyProfileRepository {
+interface MyProfileRepository {
 
     suspend fun getStreak(): Int
     suspend fun getTotalAmountOfCards(): Int

@@ -161,6 +161,9 @@
     <string name="voiceAssistant">Voice assistant</string>
     <string name="showTimer">Show timer</string>
     <string name="readOutLoudHeadline">Read out loud</string>
+    <string name="subcategoryName">Subcategory Name</string>
+    <string name="read_btn">Read</string>
+    <string name="my_equipment">Equipment</string>
 
 
 </resources>

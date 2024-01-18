@@ -34,7 +34,7 @@ class EditProfile : AppCompatActivity() {
         setContentView(R.layout.edit_profile_layout)
 
         settingsRepository = SettingsImpl(this@EditProfile)
-        goBackBtn = findViewById(R.id.goBackBtnEditProfile)
+        goBackBtn = findViewById(R.id.equipmentGoBackBtn)
         inputNewName = findViewById(R.id.editTextTextPersonName)
         saveBtn = findViewById(R.id.saveBtnEditProfile)
         uploadNewIcon = findViewById(R.id.uploadNewIcon)

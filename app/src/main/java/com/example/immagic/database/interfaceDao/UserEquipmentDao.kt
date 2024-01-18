@@ -2,10 +2,9 @@ package com.example.immagic.database.interfaceDao
 
 import androidx.room.Dao
 import androidx.room.Query
-import androidx.room.Update
 
 @Dao
-interface UserEquimpmentDao  {
+interface UserEquipmentDao  {
 
     //quantity of chest - Shop
     @Query("Select quantity FROM UserEquipment WHERE itemType = :itemType")

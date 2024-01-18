@@ -2,6 +2,7 @@ package com.example.immagic.help
 
 import android.content.Context
 import android.content.SharedPreferences
+import androidx.core.content.edit
 
 object PreferenceHelper {
     private lateinit var sharedPreferences: SharedPreferences
@@ -42,4 +43,11 @@ object PreferenceHelper {
     fun getNightTimeThemeStatus(): Boolean {
         return sharedPreferences.getBoolean("nightTimeisChecked", false)
     }
+
+    fun saveInformationAboutBoost( boostId: Int){
+        val editor = sharedPreferences.edit()
+        editor.putInt("boostId", boostId)
+        editor.apply()
+    }
+
 }

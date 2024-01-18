@@ -1,29 +1,20 @@
 package com.example.immagic.homepage
 
-import android.app.Dialog
 import android.content.Context
-import android.content.Intent
 import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.LayerDrawable
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.Window
-import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.fragment.app.FragmentManager
-import com.example.immagic.Play.QuoteActivity
 
 import com.example.immagic.R
-import com.example.immagic.dialog.DialogManager
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 
 class CourseAdapterVertical(
@@ -52,8 +43,9 @@ class CourseAdapterVertical(
         holder.progressBar.progress = userCourseProgress.level_up_points
 
         holder.itemView.setOnClickListener {
+            val temporrayId = 1
 
-            val bottomSheetFragment = HalfScreenBottomSheetDialogFragment()
+            val bottomSheetFragment = HalfScreenBottomSheetDialogFragment(temporrayId.toString())
             bottomSheetFragment.show(childFragmentManager, bottomSheetFragment.tag)
 
         }

@@ -1,4 +1,4 @@
-package com.example.immagic.database
+package com.example.bottomsheettest.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -7,7 +7,6 @@ import java.util.*
 
 @Entity(tableName = "LoginHistoryLog")
 data class LoginHistoryLog(
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "loginHistoryId") val loginHistoryId: Int = 1,
+    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "loginHistoryId") val loginHistoryId: Int,
     @ColumnInfo(name = "loginTime") val loginTime: String
 )
