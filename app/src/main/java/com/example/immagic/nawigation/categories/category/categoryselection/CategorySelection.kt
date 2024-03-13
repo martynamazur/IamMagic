@@ -8,17 +8,19 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.immagic.R
 import org.koin.androidx.viewmodel.ext.android.viewModel
-class CategorySelection: AppCompatActivity() {
+class CategorySelection: AppCompatActivity(), WalletUpdateListener, UpdateCategoryAvailabilityListener{
 
-    private val subcategoryViewModel: CategorySelectionViemModel by viewModel()
+    private val subcategoryViewModel: CategorySelectionViewModel by viewModel()
 
     private lateinit var categorySelectionRc: RecyclerView
     private lateinit var subcategoryAdapter: SubcategoryAdapter
+
     private lateinit var categorySelectionList: ArrayList<CategorySelectionModel>
     private lateinit var subcategoryPriceList: ArrayList<SubcategoryPrice>
 
     private lateinit var subcategoryGoBackBtn: ImageButton
     private lateinit var subcategoryName: TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,9 +35,7 @@ class CategorySelection: AppCompatActivity() {
         subcategoryName = findViewById(R.id.subcategoryName)
 
         subcategoryName.text = categoryName
-        subcategoryGoBackBtn.setOnClickListener {
-            finish()
-        }
+        subcategoryGoBackBtn.setOnClickListener { finish() }
 
         categorySelectionList = ArrayList()
         subcategoryPriceList = ArrayList()
@@ -43,9 +43,20 @@ class CategorySelection: AppCompatActivity() {
         val layoutManager = GridLayoutManager(this, 2)
         categorySelectionRc.layoutManager = layoutManager
 
-        subcategoryAdapter = SubcategoryAdapter(categorySelectionList, subcategoryPriceList)
+
+        val walletBalanceValue: Int = subcategoryViewModel.walletBalance.value ?: 0
+
+        subcategoryAdapter = SubcategoryAdapter(categorySelectionList, subcategoryPriceList,walletBalanceValue, this, this)
         categorySelectionRc.adapter = subcategoryAdapter
 
+
+
+        /*
+        subcategoryViewModel.walletBalance.observe(this){newBalance ->
+            subcategoryAdapter.updateWalletBalance(newBalance)
+        }
+
+         */
 
         subcategoryViewModel.categorySelectionList.observe(this) { updatedList ->
             val sortedList = updatedList.sortedBy{ it.lockedStatus }
@@ -55,15 +66,26 @@ class CategorySelection: AppCompatActivity() {
             subcategoryAdapter.notifyDataSetChanged()
         }
 
-        subcategoryViewModel.getAllPriceOfSubcategories.observe(this, {updatedList ->
+        subcategoryViewModel.getAllPriceOfSubcategories.observe(this) { updatedList ->
             subcategoryPriceList.clear()
             subcategoryPriceList.addAll(updatedList)
             subcategoryAdapter.notifyDataSetChanged()
-        })
+        }
 
 
         if (categoryId != null) {
             subcategoryViewModel.fetchData(categoryId.toInt())
         }
+
+
     }
+
+    override fun updateWalletBalance(newBalance: Int) {
+        subcategoryViewModel.updateWalletBalance(newBalance)
+    }
+
+    override fun updateCategoryAvailability(newStatus: Int, categoryId: Int) {
+        subcategoryViewModel.updateCategoryAvailability(newStatus, categoryId)
+    }
+
 }

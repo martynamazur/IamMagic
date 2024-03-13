@@ -1,6 +1,7 @@
 package com.example.immagic.homepage.Play
 
 import android.content.Intent
+import android.os.Build.VERSION
 import android.os.Bundle
 import android.util.Log
 import android.view.GestureDetector
@@ -10,6 +11,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.IntentCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
@@ -46,8 +48,13 @@ class QuoteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quote)
 
-        val cardSetId = intent.getStringExtra("cardSetId")?.toInt()
+        val cardSetId = intent.getIntExtra("cardSetId",-1)
+        val myList: ArrayList<QuoteSettingsModel>? = IntentCompat.getParcelableArrayListExtra(intent, "quoteSettings", QuoteSettingsModel::class.java)
+        Log.d("tag","wartosi ${myList!!.get(0).readOutLoud}")
+
         val playQuoteViewModel: PlayQuoteViewModel by viewModel { parametersOf(cardSetId) }
+
+        TODO("Odkomentowac, kiedy uzupelnie baze danych . Dodac cytaty do zestawu bo nie mam na czym testowac")
 
         swipeGestureListener = SwipeGestureListener {
             handleSwipe()
@@ -61,7 +68,7 @@ class QuoteActivity : AppCompatActivity() {
 
 
         lifecycleScope.launch {
-            quoteList = rep.getAllQuotes(144)
+            quoteList = rep.getAllQuotes(cardSetId)
             Log.d("tag","ile jest w liscie ${quoteList.size}")
             amountOfCardInSet = quoteList.size
             updateQuoteText()
@@ -94,7 +101,6 @@ class QuoteActivity : AppCompatActivity() {
 
 
         addedToFavouritedBtn.setOnClickListener {
-            if ()
 
         }
 
@@ -152,7 +158,10 @@ class QuoteActivity : AppCompatActivity() {
 
         val alertDialog = alertDialogBuilder.create()
         alertDialog.show()
+
     }
+
+
 
 }
 

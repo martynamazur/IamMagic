@@ -10,7 +10,8 @@
         android:id="@+id/imageView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/image_empty_fac" />
+        app:srcCompat="@drawable/image_empty_fac"
+        android:contentDescription="illustration of heart" />
 
     <TextView
         android:id="@+id/textView28"
@@ -29,7 +30,7 @@
         android:textSize="12sp" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/exploreBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/primary_button_background"

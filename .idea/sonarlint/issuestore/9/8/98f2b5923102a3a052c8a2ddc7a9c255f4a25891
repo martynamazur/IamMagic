@@ -1,0 +1,11 @@
+
+Tkotlin:S1172="0Remove this unused function parameter "context".(àş¤áúÿÿÿÿ8îíÂ’Ê1
+_kotlin:S6615G";Remove this variable, which is assigned but never accessed.(¬™Ôúÿÿÿÿ8ÿíÂ’Ê1
+Ekotlin:S6615P"&The value assigned here is never used.(Üàê›8‚îÂ’Ê1
+Jkotlin:S6615\"&The value assigned here is never used.(ˆ·Š…úÿÿÿÿ8‚îÂ’Ê1
+Ekotlin:S6615X"&The value assigned here is never used.(Ä˜˜8ƒîÂ’Ê1
+Jkotlin:S6615T"&The value assigned here is never used.(†ËÀûÿÿÿÿ8îÂ’Ê1
+Dkotlin:S6615L"&The value assigned here is never used.(—ğ8ƒîÂ’Ê1
+9kotlin:S1128"Remove this unused import.(ıºÎà8Ö£¿’Ê1
+>kotlin:S1128"Remove this unused import.(ÚÚÙÁúÿÿÿÿ8Ö£¿’Ê1
+9kotlin:S1128"Remove this unused import.(İ˜Æ‚8Ö£¿’Ê1

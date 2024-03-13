@@ -8,4 +8,9 @@ interface MyProfileRepository {
     suspend fun getUsername(): String
      suspend fun getUserStatisticInfo(): List<ProfileStatisticModel>
 
+     //przeniesc pozniej
+     suspend fun getWalletBalance(): Int
+
+     suspend fun updateWalletBalance(newBalance: Int)
+
 }

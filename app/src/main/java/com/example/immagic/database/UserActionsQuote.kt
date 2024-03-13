@@ -12,6 +12,6 @@ data class UserActionsQuote(
     @ColumnInfo(name = "userSoundRecordFileName") val userSoundRecordFileName: String,
     @ColumnInfo(name = "userSoundStatus") val userSoundStatus: Int,
     @ColumnInfo(name = "favouriteStatus") val favouriteStatus: Int,
-    @ColumnInfo(name = "cardSetId") val cardSetId: Int
+   @ColumnInfo(name = "cardSetId") val cardSetId: Int
 
 )

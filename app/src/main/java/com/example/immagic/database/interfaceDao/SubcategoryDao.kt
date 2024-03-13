@@ -16,5 +16,8 @@ interface SubcategoryDao {
     @Query("SELECT CategoryCardSet.subcategoryId, CardSetPrice.price FROM CategoryCardSet JOIN CardSetPrice ON CategoryCardSet.cardSetId = CardSetPrice.cardSetId WHERE CategoryCardSet.lockedStatus = 2;")
     suspend fun getAllPriceOfSubcategories(): List<SubcategoryPrice>
 
-  
+    @Query("Update Subcategory SET lockedStatus = :newStatus WHERE subcategoryId = :categoryId ")
+    suspend fun updateLockedStatus(newStatus: Int, categoryId: Int)
+
+
 }

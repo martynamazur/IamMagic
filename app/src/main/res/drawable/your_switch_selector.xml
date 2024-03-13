@@ -17,7 +17,7 @@
             <solid android:color="@color/progress_bar_grey" />
             <!-- Kolor kciuka w stanie OFF -->
             <size android:width="32dp" android:height="32dp" />
-            <solid android:color="@color/white" />
+            <solid android:color="@color/locked_course_grey" />
             <corners android:radius="16dp" />
         </shape>
     </item>

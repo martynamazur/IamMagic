@@ -75,7 +75,8 @@ class ShopFragment : Fragment() {
         magicChestList = listOf(
             MagicChestItemModel("Magic Chest 1", R.drawable.basicchest),//
             MagicChestItemModel("Magic Chest 2", R.drawable.basicchest),//TODO: zmienic pozniej na odpowiednie ikony po ich przerobieniu
-            MagicChestItemModel("Magic Chest 3", R.drawable.basicchest)
+            MagicChestItemModel("Magic Chest 3", R.drawable.basicchest),
+            MagicChestItemModel("Legendary", R.drawable.basicchest)
         )
 
         // Inicjalizacja freezStreakList
@@ -134,7 +135,7 @@ class ShopFragment : Fragment() {
         backgroundsRc.adapter = backgroundsAdapter
 
 
-        magicChestRc.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        magicChestRc.layoutManager = GridLayoutManager(context, 2)
         freezStreakRc.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         boostersRc.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
         backgroundsRc.layoutManager = GridLayoutManager(context, 3)

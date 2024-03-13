@@ -7,6 +7,7 @@
         android:icon="@drawable/home_icon"
         android:title="@string/home_nav"
         app:labelVisibilityMode="labeled"
+        android:checkable="false"
 
         />
 
@@ -16,6 +17,7 @@
         android:title="@string/favourite"
         app:showAsAction="never"
         android:visible="true"
+        android:checkable="false"
 
         />
 
@@ -23,18 +25,21 @@
         android:id="@+id/notifications"
         android:icon="@drawable/ring_iocn"
         android:title="@string/notification"
+        android:checkable="false"
         app:showAsAction="never"/>
 
     <item
         android:id="@+id/cards"
         android:icon="@drawable/card_icon"
         android:title="@string/cards"
+        android:checkable="false"
         app:showAsAction="never"/>
 
     <item
         android:id="@+id/myProfile"
         android:icon="@drawable/my_profile_icon"
         android:title="@string/my_profile"
+        android:checkable="false"
         app:showAsAction="never"/>
 
 </menu>

@@ -10,5 +10,6 @@ data class Category(
     @ColumnInfo(name = "categoryName") val categoryName: String,
     @ColumnInfo(name = "availability") val availability: Int,
     @ColumnInfo(name = "iconPath") val iconPath: String, // TODO chyba int
+    @ColumnInfo(name = "type") val type: String
 
 )

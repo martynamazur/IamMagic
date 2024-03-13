@@ -1,0 +1,10 @@
+<!-- rounded_rectangle.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#ECE4FF"/> <!-- Kolor dla domyślnego stanu -->
+            <corners android:radius="20dp"/> <!-- Zaokrąglone rogi -->
+        </shape>
+    </item>
+</selector>

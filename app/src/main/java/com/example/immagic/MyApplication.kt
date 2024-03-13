@@ -15,7 +15,10 @@ import com.example.immagic.homepage.Play.PlayQuoteRepository
 import com.example.immagic.homepage.Play.PlayQuoteViewModel
 import com.example.immagic.nawigation.categories.category.categoryselection.CategorySelectionImp
 import com.example.immagic.nawigation.categories.category.categoryselection.CategorySelectionRepository
-import com.example.immagic.nawigation.categories.category.categoryselection.CategorySelectionViemModel
+import com.example.immagic.nawigation.categories.category.categoryselection.CategorySelectionViewModel
+import com.example.immagic.nawigation.favourite.FavouriteImpl
+import com.example.immagic.nawigation.favourite.FavouriteRepository
+import com.example.immagic.nawigation.favourite.FavouriteViewModel
 
 
 class MyApplication : Application() {
@@ -37,10 +40,13 @@ val appModule = module {
     viewModel { HomePageViewModel(get()) }
 
     single<CategorySelectionRepository> {CategorySelectionImp(androidContext())}
-    viewModel { CategorySelectionViemModel(get()) }
+    viewModel { CategorySelectionViewModel(get(), get()) }
 
     single<PlayQuoteRepository> { PlayQuoteImp(androidContext()) }
     viewModel { (cardSetId: Int) -> PlayQuoteViewModel(get(), cardSetId) }
+
+    single<FavouriteRepository>{FavouriteImpl(androidContext())}
+    viewModel{ FavouriteViewModel(get()) }
 }
 
 

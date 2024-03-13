@@ -160,6 +160,19 @@
     <string name="subcategoryName">Subcategory Name</string>
     <string name="read_btn">Read</string>
     <string name="my_equipment">Equipment</string>
+    <string name="joinedMonth">Joined April 2024</string>
+    <string name="exp_points_gained">exp points\n</string>
+    <string name="level_default_text">LEVEL 0</string>
+    <string name="welcomeUser">Hello</string>
+    <string name="exp_to_deafault">0 exp to</string>
+    <string name="exp_points_gained_default">123 exp points</string>
+    <string name="choose_a_category">Choose a category</string>
+    <string name="all_btn_category">All</string>
+    <string name="empty">" "</string>
+    <string name="status">Status</string>
+    <string name="status_never_used">Never used</string>
+    <string name="amount_headline">Amount</string>
+    <string name="explore_content">Explore content</string>
 
 
 </resources>

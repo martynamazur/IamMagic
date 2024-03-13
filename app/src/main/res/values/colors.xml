@@ -20,7 +20,11 @@
     <color name="locked_course_grey">#EBEBEB</color>
     <color name="action_play_btn">#CDCDE7</color>
     <color name="summary_line">#E8E8E8</color>
-
+    <color name="greyish_text">#AEAEAE</color>
+    <color name="line_separator_grey">#EEEEEE</color>
+    <color name="dark_violet_text_filter_category">#3A1A53</color>
+    <color name="blue">#008BF9</color>
+    <color name="elevation_shadow">#B3B3B3</color>
 
 
 </resources>

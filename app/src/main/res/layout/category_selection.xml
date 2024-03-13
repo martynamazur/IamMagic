@@ -17,8 +17,8 @@
 
         <ImageButton
             android:id="@+id/equipmentGoBackBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_weight="0"
 
             android:background="@android:color/transparent"
@@ -33,6 +33,7 @@
             android:paddingEnd="8dp"
             android:gravity="start|center_vertical"
             android:text="@string/subcategoryName"
+            android:layout_gravity="center_vertical"
             android:textAllCaps="true" />
 
 

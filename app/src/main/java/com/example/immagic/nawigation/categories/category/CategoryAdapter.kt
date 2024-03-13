@@ -15,7 +15,7 @@ import com.example.immagic.nawigation.categories.category.categoryselection.Cate
 
 class CategoryAdapter(
     private val context: Context,
-    private val dataList: List<CategoryModel>
+    private val dataList: ArrayList<CategoryModel>
 ) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -45,9 +45,19 @@ class CategoryAdapter(
         return dataList.size
     }
 
+    fun setDataList(filteredList: List<CategoryModel>) {
+
+        dataList.clear() // Wyczyść aktualną listę
+        dataList.addAll(filteredList) // Dodaj wszystkie elementy z przefiltrowanej listy
+        notifyDataSetChanged() // Powiadom adapter o zmianach
+    }
+
+
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val categoryName: TextView =  itemView.findViewById(R.id.categoryName)
         val categoryIcon: ImageView = itemView.findViewById(R.id.categoryIcon)
-        val categoryNext: ImageView = itemView.findViewById(R.id.imageButton2)
+
     }
+
+
 }

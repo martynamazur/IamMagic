@@ -15,7 +15,6 @@ import com.example.immagic.R
 
 import com.example.immagic.nawigation.myprofile.myaddedcards.MyAddedCards
 import com.example.immagic.nawigation.myprofile.myequipment.MyEquipment
-import com.example.immagic.nawigation.myprofile.myrecordings.MyRecordings
 
 import kotlinx.coroutines.launch
 
@@ -35,7 +34,7 @@ class ProfileFragment : Fragment() {
 
 
     private lateinit var myCardsProfile: Button
-    private lateinit var myRecordings: Button
+
     private lateinit var myEquipment: Button
 
     private lateinit var helloName: TextView
@@ -51,18 +50,21 @@ class ProfileFragment : Fragment() {
 
 
         myCardsProfile = view.findViewById(R.id.myCardsProfile)
-        myRecordings = view.findViewById(R.id.myRecordings)
         myEquipment = view.findViewById(R.id.equipmentBtnProfile)
         helloName = view.findViewById(R.id.helloName)
 
-        statisticModelList = ArrayList()
+        //statisticModelList = profileViewModel.userStatistics// przypisac zworcona z bazy danych
 
 
         statisticRc = view.findViewById(R.id.statisticRc)
-        statisticAdapter = StatisticAdapter(statisticModelList)
+        statisticAdapter = StatisticAdapter(ArrayList())
         statisticRc.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         statisticRc.adapter = statisticAdapter
 
+        profileViewModel.userStatistics.observe(viewLifecycleOwner) { newStatistics ->
+            // Update the RecyclerView adapter with the new data
+            statisticAdapter.updateData(newStatistics)
+        }
 
         profileViewModel.helloName.observe(viewLifecycleOwner
         ) { newName -> helloName.text = newName }
@@ -78,10 +80,7 @@ class ProfileFragment : Fragment() {
             startActivity(intent)
         }
 
-        myRecordings.setOnClickListener {
-            val intent = Intent(requireContext(), MyRecordings::class.java)
-            startActivity(intent)
-        }
+
 
         myEquipment.setOnClickListener {
             val intent = Intent(requireContext(), MyEquipment::class.java)

@@ -6,17 +6,15 @@
     android:layout_height="wrap_content"
     android:clickable="true"
     android:focusable="true"
-    android:orientation="vertical"
-    android:layout_marginBottom="16dp"
-    >
+    android:orientation="vertical">
 
     <LinearLayout
         style="@style/Margin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:layout_marginBottom="16dp"
-       android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+       android:layout_marginTop="20dp"
         >
 
         <ImageView
@@ -24,7 +22,6 @@
             android:layout_width="18dp"
             android:layout_height="18dp"
             app:srcCompat="@drawable/united_kingdom_flag_icon"
-
             />
 
         <TextView
@@ -32,9 +29,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
-            android:textSize="18sp"
-            android:paddingLeft="12dp"
-            android:paddingRight="12dp"
+            android:textSize="16sp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
 
             />
     </LinearLayout>
@@ -43,7 +40,7 @@
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/inactive_text_grey" />
+        android:background="@color/line_separator_grey" />
 
 
 </LinearLayout>

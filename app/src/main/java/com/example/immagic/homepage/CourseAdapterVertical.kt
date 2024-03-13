@@ -45,7 +45,7 @@ class CourseAdapterVertical(
         holder.itemView.setOnClickListener {
             val temporrayId = 1
 
-            val bottomSheetFragment = HalfScreenBottomSheetDialogFragment(temporrayId.toString())
+            val bottomSheetFragment = HalfScreenBottomSheetDialogFragment(temporrayId)
             bottomSheetFragment.show(childFragmentManager, bottomSheetFragment.tag)
 
         }

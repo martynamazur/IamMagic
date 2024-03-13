@@ -7,35 +7,35 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.immagic.R
-import com.example.immagic.database.AppDatabase
-import com.example.immagic.nawigation.favourite.singlecards.manage.LikedQuotesAdapter
-import com.example.immagic.nawigation.favourite.singlecards.manage.LikedQuotesModel
+import com.example.immagic.nawigation.favourite.FavouriteCardsModel
+import com.example.immagic.nawigation.favourite.FavouriteViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class FavListFragment : Fragment() {
+class FavListFragment : Fragment(), UnlikeQuoteListener {
 
-    private lateinit var favCardsRc: RecyclerView
-    private lateinit var favCardsList: ArrayList<LikedQuotesModel>
-    lateinit var favCardsAdapter: LikedQuotesAdapter
+    private val favouriteViewModel: FavouriteViewModel by viewModel()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
         val view = inflater.inflate(R.layout.list_fav_cards_layout, container, false)
 
-        //getList()
 
-        favCardsRc = view.findViewById(R.id.favCardsRc)
-        favCardsList = ArrayList()
-        favCardsAdapter = LikedQuotesAdapter(favCardsList)
-        favCardsRc.layoutManager = LinearLayoutManager(requireContext())
-        favCardsRc.adapter = favCardsAdapter
+        val favouriteCardsRecycler: RecyclerView = view.findViewById(R.id.favCardsRc)
+        favouriteCardsRecycler.layoutManager = LinearLayoutManager(context)
+
+        val favouriteCardsAdapter = FavouriteCardsAdapter(emptyList(), this)
+        favouriteCardsRecycler.adapter = favouriteCardsAdapter
+
+
+        favouriteViewModel.favouriteCards.observe(viewLifecycleOwner) { favouriteCards ->
+            favouriteCardsAdapter.updateData(favouriteCards)
+        }
 
         return view
     }
 
-    fun getList(){
-        //val database: AppDatabase = AppDatabase.getInstance(requireContext())
-        //val likedQuotes: List<LikedQuotesModel> = database.userActionsQuotesDao().getLikedQuotes(1)
-        //println("ile jest"+likedQuotes.size)
+    override fun deleteQuoteFromList(quoteId: Int) {
+        favouriteViewModel.deleteQuoteFromList(quoteId)
     }
 }

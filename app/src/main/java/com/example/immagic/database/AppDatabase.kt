@@ -35,7 +35,8 @@ import java.io.FileOutputStream
         LoginHistoryLog::class,
         CardSetPrice::class,
         CardSetLevel::class,
-        SubcategoriesBridge::class
+        SubcategoriesBridge::class,
+        FavouriteCardSet::class
 
                ],
 
@@ -63,6 +64,8 @@ abstract class AppDatabase : RoomDatabase() {
 
     abstract fun quote(): QuoteDao
     abstract fun userActionsQuote(): UserActionsQuoteDao
+
+    abstract fun favouriteCardSet(): FavouriteCardSetDao
 
 
     companion object {

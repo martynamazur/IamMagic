@@ -21,7 +21,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            app:srcCompat="@drawable/arrow" />
+            app:srcCompat="@drawable/arrow"
+            android:background="@android:color/transparent"
+            android:contentDescription="return button" />
 
         <TextView
             android:id="@+id/textView466"

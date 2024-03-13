@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/subcategoryItem"
+    android:layout_width="160dp"
+    android:layout_height="160dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_marginBottom="20dp"
+    android:layout_marginTop="32dp"
+
+    android:layout_marginStart="18dp"
+    android:layout_marginEnd="24dp"
+
+    android:outlineSpotShadowColor="#B3B3B3"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="20dp"
+
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="40dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        >
+
+        <ImageView
+            android:id="@+id/subcategoryIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="cardset icon"
+            app:srcCompat="@drawable/testiconunlockedcategory" />
+
+        <TextView
+            android:id="@+id/subcategorySelectionName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="TextView" />
+
+
+
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>

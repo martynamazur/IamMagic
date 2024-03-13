@@ -16,7 +16,7 @@ import androidx.appcompat.widget.SwitchCompat
 import com.example.immagic.homepage.Play.QuoteActivity
 import com.example.immagic.homepage.Play.QuoteSettingsModel
 
-class HalfScreenBottomSheetDialogFragment(private val cardSetId: String?) : BottomSheetDialogFragment() {
+class HalfScreenBottomSheetDialogFragment(private val cardSetId: Int) : BottomSheetDialogFragment() {
 
     private lateinit var playCardsBtn: Button
     private lateinit var voiceAssistantSwitch: SwitchCompat
@@ -60,14 +60,12 @@ class HalfScreenBottomSheetDialogFragment(private val cardSetId: String?) : Bott
         }
 
         playCardsBtn.setOnClickListener {
-            //1. SettingPlay object
-            //2. cardSetId int
-            val temporary = "144"
-            val quoteSettingsModel = QuoteSettingsModel(repeatSetCounter,voiceAssistantSwitch.isActivated, showTimerSwitch.isActivated,readOutLoudSwitch.isActivated )
-            val intent = Intent(requireContext(), QuoteActivity::class.java)
-            intent.putExtra("cardSetId","144")
-            //intent.putExtra("quoteSettings", quoteSettingsModel)
+            val myList = ArrayList<QuoteSettingsModel>()
+            myList.add(QuoteSettingsModel(repeatSetCounter,voiceAssistantSwitch.isActivated, showTimerSwitch.isActivated,readOutLoudSwitch.isActivated ))
 
+            val intent = Intent(requireContext(), QuoteActivity::class.java)
+            intent.putExtra("cardSetId",cardSetId)
+            intent.putParcelableArrayListExtra("quoteSettings", myList)
             startActivity(intent)
         }
         return view

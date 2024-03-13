@@ -34,4 +34,10 @@ class CategorySelectionImp(private val context: Context): CategorySelectionRepos
         }
     }
 
+    override suspend fun updateCategoryAvailability(newStatus: Int, categoryId: Int) {
+        val db = AppDatabase.getInstance(context)
+        val subcategoryDao = db.subCategory()
+        subcategoryDao.updateLockedStatus(newStatus,categoryId)
+    }
+
 }

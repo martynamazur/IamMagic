@@ -7,8 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.immagic.R
 
-
-class StatisticAdapter(private val statisticModelList: ArrayList<ProfileStatisticModel>) : RecyclerView.Adapter<StatisticAdapter.ViewHolder>() {
+class StatisticAdapter(var statisticModelList: List<ProfileStatisticModel>) : RecyclerView.Adapter<StatisticAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -27,10 +26,14 @@ class StatisticAdapter(private val statisticModelList: ArrayList<ProfileStatisti
 
         holder.number.text = item.number
         holder.statisticTypeName.text = item.statisticTypeName
-
     }
 
     override fun getItemCount(): Int {
         return statisticModelList.size
+    }
+
+    fun updateData(newList: List<ProfileStatisticModel>) {
+        statisticModelList = newList
+        notifyDataSetChanged()
     }
 }

@@ -5,6 +5,7 @@ data class CategoryModel(
     val categoryName: String,
     val iconPath:String,
     val availability: Int,
+    val type: String
 )
 
 

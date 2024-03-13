@@ -68,6 +68,7 @@
         <activity android:name=".nawigation.categories.category.categoryselection.CategorySelection"/>
         <activity android:name=".nawigation.categories.category.categoryselection.CategoryOverView"/>
 
+        <activity android:name=".Subscription.SubscriptionOverView"/>
 
         <receiver
             android:name=".backgroundtasks.MyAlarmReceiver"

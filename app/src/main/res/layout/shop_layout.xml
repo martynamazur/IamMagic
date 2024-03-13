@@ -5,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- AppBarLayout dla górnego paska -->
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <LinearLayout
 
@@ -20,8 +19,6 @@
             android:padding="8dp"
             android:background="@color/white"
             app:layout_scrollFlags="scroll|enterAlways">
-
-            <!-- Zawartość paska informacyjnego -->
 
 
             <TextView
@@ -71,7 +68,7 @@
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- ScrollView z zawartością sklepu -->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -84,27 +81,65 @@
             android:orientation="vertical">
 
 
-            <Button
-                android:id="@+id/watchAddBtn"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/gainAlchemyBoottlesBtn"
-                android:background="@drawable/watch_add_background"
-                android:drawableEnd="@drawable/alchemy_bottle"
+                android:layout_height="70dp"
 
-                android:textAllCaps="false"
-                android:layout_marginTop="25dp"
-                android:layout_marginBottom="25dp"/>
+                android:outlineSpotShadowColor="#B3B3B3"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                >
 
-            <Button
-                android:id="@+id/removeAddsBtn"
+
+                <Button
+                    android:id="@+id/watchAddBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@android:color/transparent"
+                    android:drawableEnd="@drawable/alchemy_bottle"
+
+                    android:text="@string/gainAlchemyBoottlesBtn"
+                    android:textAllCaps="false" />
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="@string/removeAddsForeverBtn"
-                android:textAllCaps="false"
-                android:elevation="28.6dp"
-                android:background="@drawable/remove_adds_background"/>
+                android:layout_height="70dp"
+
+                android:outlineSpotShadowColor="#B3B3B3"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="20dp"
+
+                android:layout_marginBottom="30dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+
+                >
+
+
+                <Button
+                    android:id="@+id/removeAddsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@android:color/transparent"
+                    android:drawableEnd="@drawable/alchemy_bottle"
+
+                    android:text="@string/gainAlchemyBoottlesBtn"
+                    android:textAllCaps="false" />
+
+            </androidx.cardview.widget.CardView>
+
 
             <!-- Magic Chest -->
             <TextView
@@ -115,6 +150,8 @@
                 android:text="@string/magicChestHeadline"
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
 
                 />
 

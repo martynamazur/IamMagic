@@ -4,14 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-
-    <TextView
-        android:id="@+id/textView34"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fav card set" />
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerSet"
         android:layout_width="match_parent"

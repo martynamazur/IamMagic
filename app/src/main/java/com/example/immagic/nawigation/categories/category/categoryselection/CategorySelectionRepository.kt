@@ -6,4 +6,5 @@ interface CategorySelectionRepository {
 
     suspend fun getSubcategories(subCategoryId: Int): List<CategorySelectionModel>
     suspend fun getAllSubcategoriesPrices(): List<SubcategoryPrice>
+    suspend fun updateCategoryAvailability(newStatus: Int, categoryId: Int)
 }
